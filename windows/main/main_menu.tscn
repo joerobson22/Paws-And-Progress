@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dwcpx3ka1s3lx"]
+[gd_scene load_steps=79 format=3 uid="uid://dwcpx3ka1s3lx"]
 
 [ext_resource type="Script" path="res://windows/main/main_menu.gd" id="1_lg0e8"]
 [ext_resource type="Texture2D" uid="uid://b4xfx4i0nig8u" path="res://assets/main/main-menu/background/background.png" id="2_167x4"]
@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://v88oanagx88u" path="res://windows/character-customisation/character_customisation.tscn" id="21_urswt"]
 [ext_resource type="PackedScene" uid="uid://cvr75iy54tiij" path="res://windows/transition.tscn" id="23_kulfc"]
 [ext_resource type="FontFile" uid="uid://cveouj21bacwl" path="res://assets/fonts/Daniel-Black.otf" id="23_tr6rn"]
+[ext_resource type="Texture2D" uid="uid://ccuu7dw2xhy5b" path="res://assets/main/main-menu/misc/balloon_string.png" id="27_6uurk"]
+[ext_resource type="Texture2D" uid="uid://dcvmevyk7ulo0" path="res://assets/main/main-menu/misc/balloon.png" id="28_nw5a5"]
 
 [sub_resource type="Animation" id="Animation_22m2p"]
 length = 0.001
@@ -1037,6 +1039,45 @@ _data = {
 "RESET": SubResource("Animation_465je")
 }
 
+[sub_resource type="Animation" id="Animation_yuvyp"]
+resource_name = "yay"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.974461, 0.402043, 0.553643, 1), Color(0.963428, 0.457876, 0.199313, 1), Color(0.752941, 0.768627, 0.121569, 1), Color(0.26908, 0.838003, 0.371767, 1), Color(0.249999, 0.753763, 0.76943, 1), Color(0.343434, 0.659565, 0.947019, 1), Color(0.608879, 0.52436, 0.985069, 1), Color(0.951815, 0.301475, 0.735394, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fv1vt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.974461, 0.402043, 0.553643, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_daynx"]
+_data = {
+"RESET": SubResource("Animation_fv1vt"),
+"yay": SubResource("Animation_yuvyp")
+}
+
 [sub_resource type="Animation" id="Animation_xa070"]
 length = 0.001
 tracks/0/type = "value"
@@ -1795,15 +1836,97 @@ z_index = 20
 visible = false
 
 [node name="Label" type="Label" parent="CanvasLayer/Centre/Happy_Birthday"]
-modulate = Color(5.19812e-06, 0.66381, 0.990706, 1)
+modulate = Color(0.974461, 0.402043, 0.553643, 1)
 offset_left = -411.0
 offset_top = 214.0
 offset_right = 413.0
 offset_bottom = 251.0
 theme_override_fonts/font = ExtResource("23_tr6rn")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 39
 text = "HAPPY BIRTHDAY <name>"
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Centre/Happy_Birthday/Label"]
+libraries = {
+"": SubResource("AnimationLibrary_daynx")
+}
+
+[node name="Balloons" type="Node2D" parent="CanvasLayer/Centre/Happy_Birthday"]
+
+[node name="Balloon1" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(-323, -73)
+scale = Vector2(2, 2)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon1"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon2" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0.272231, 0.573446, 0.722439, 1)
+position = Vector2(321, 49)
+scale = Vector2(2, 2)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon2"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon3" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0.696808, 0.298001, 0.970248, 1)
+position = Vector2(-119, -233)
+scale = Vector2(2, 2)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon3"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon4" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0.14888, 0.618414, 0.51742, 1)
+position = Vector2(241, -54)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon4"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon5" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0, 0.641853, 0.311919, 1)
+position = Vector2(-75, 1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon5"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon6" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0.844693, 0.292979, 0.608282, 1)
+position = Vector2(155, -156)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon6"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
+
+[node name="Balloon7" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons"]
+self_modulate = Color(0.909525, 0.29587, 0, 1)
+position = Vector2(-158, 3)
+texture = ExtResource("28_nw5a5")
+
+[node name="Sprite" type="Sprite2D" parent="CanvasLayer/Centre/Happy_Birthday/Balloons/Balloon7"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("27_6uurk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

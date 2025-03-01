@@ -7,7 +7,7 @@ var scrollerType : String
 var scrollerNum : int
 
 var quantities = {
-	"hat" : [1, 1, 1, 1, global.gifts[14], global.gifts[26], 0, 0],
+	"hat" : [1, 1, 1, 1, global.gifts[14], global.gifts[26], global.gifts[35], 0],
 	"hair" : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
 	"face" : [1, 1, 1, 1, 1, 1],
 	"jumper" : [1, 1, 1, 1, 1, global.gifts[2], global.gifts[23], global.gifts[32]],

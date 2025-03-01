@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cvgpmh5laqkya"]
+[gd_scene load_steps=39 format=3 uid="uid://cvgpmh5laqkya"]
 
 [ext_resource type="Script" path="res://windows/focus/focus-time/focus_time.gd" id="1_phghm"]
 [ext_resource type="Script" path="res://windows/focus/focus-time/timer.gd" id="2_ab2fv"]
@@ -255,6 +255,33 @@ tracks/1/keys = {
 "values": [Vector2(600, 580)]
 }
 
+[sub_resource type="Animation" id="Animation_4vd2t"]
+resource_name = "dog5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(650, 550)]
+}
+
 [sub_resource type="Animation" id="Animation_0gun6"]
 resource_name = "guinea_pig1"
 tracks/0/type = "value"
@@ -336,31 +363,31 @@ tracks/1/keys = {
 "values": [Vector2(350, 600)]
 }
 
-[sub_resource type="Animation" id="Animation_4vd2t"]
-resource_name = "dog5"
+[sub_resource type="Animation" id="Animation_2fx1r"]
+resource_name = "nigel"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.8, 0.8)]
+"values": [Vector2(580, 630)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(650, 550)]
+"values": [Vector2(0.6, 0.6)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6bvw0"]
@@ -375,6 +402,7 @@ _data = {
 "dog4": SubResource("Animation_cgg7g"),
 "dog5": SubResource("Animation_4vd2t"),
 "guinea_pig1": SubResource("Animation_0gun6"),
+"nigel": SubResource("Animation_2fx1r"),
 "rabbit": SubResource("Animation_oetpy"),
 "snail": SubResource("Animation_m3dar")
 }

@@ -301,6 +301,7 @@ texture = ExtResource("4_wmq56")
 
 [node name="Gift" parent="CanvasLayer/HBoxContainer" instance=ExtResource("6_2hkra")]
 visible = false
+z_index = 5
 
 [node name="Control" type="Control" parent="CanvasLayer/HBoxContainer/Gift"]
 layout_mode = 3

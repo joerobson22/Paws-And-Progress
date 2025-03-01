@@ -11,7 +11,7 @@ extends Node2D
 @onready var Cabin_Armchair = $CanvasLayer/Centre/Cabin/Armchair
 @onready var Cabin_Light = $CanvasLayer/Centre/Cabin/Light
 
-@onready var Happy_Birthday = $CanvasLayer/Centre/Happy_Birthday/Label
+@onready var Happy_Birthday = $CanvasLayer/Centre/Happy_Birthday
 
 @onready var Choose_Focus = $CanvasLayer/Centre/Choose_Focus
 
@@ -90,7 +90,8 @@ func _ready() -> void:
 	while i < birthdayDates.size():
 		birthday = isDate(birthdayDates[i][0], birthdayDates[i][1])
 		if birthday:
-			Happy_Birthday.text = "HAPPY BIRTHDAY " + birthdayPeople[i] + "!!!"
+			Happy_Birthday.get_node("Label").text = "HAPPY BIRTHDAY " + birthdayPeople[i] + "!!!"
+			Happy_Birthday.get_node("Label/AnimationPlayer").play("yay")
 			break
 		i += 1
 	

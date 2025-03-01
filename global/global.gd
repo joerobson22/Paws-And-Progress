@@ -1,6 +1,6 @@
 extends Node2D
 
-var testing : bool = true
+var testing : bool = false
 var founder : bool = false
 
 var daysOfMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -46,11 +46,11 @@ var colourSchemes : int = 0
 
 var rng = RandomNumberGenerator.new()
 
-var animals = ["dog1", "dog2", "dog3", "cat1", "guinea_pig1", "bear1", "rabbit", "dog4", "bird1", "snail", "dog5"]
+var animals = ["dog1", "dog2", "dog3", "cat1", "guinea_pig1", "bear1", "rabbit", "dog4", "bird1", "snail", "dog5", "nigel"]
 var numAnimals = animals.size()
-var animalSounds = ["dog_bark1", "dog_bark2", "dog_bark3", "cat_meow1", "guinea_pig_squeak1", "bear_roar1", "rabbit_squeak", "dog_bark4", "bird_tweet1", "snail_sludge", "dog_bark3"]
-var walkSpeeds = [0.75, 1, 1.1, 0.6, 0.3, 0.8, 0.75, 1, 1, 0.1, 1.1]
-var colourNotCustomisable = ["dog5"]
+var animalSounds = ["dog_bark1", "dog_bark2", "dog_bark3", "cat_meow1", "guinea_pig_squeak1", "bear_roar1", "rabbit_squeak", "dog_bark4", "bird_tweet1", "snail_sludge", "dog_bark3", "nigel_squeak"]
+var walkSpeeds = [0.75, 1, 1.1, 0.6, 0.3, 0.8, 0.75, 1, 1, 0.1, 1.1, 0.6]
+var colourNotCustomisable = ["dog5", "nigel"]
 
 var skinColours = []
 var hairColours = []
@@ -80,7 +80,8 @@ var animalParts = {
 	"dog4" : ["Legs", "Body", "Pattern"],
 	"bird1" : ["Wings", "Body", "Pattern"],
 	"snail" : ["Body", "Shell", "Pattern"],
-	"dog5" : ["Legs", "Body", "Pattern"]
+	"dog5" : ["Legs", "Body", "Pattern"],
+	"nigel" : ["Legs", "Body", "Pattern"]
 }
 
 
@@ -96,7 +97,8 @@ var animalGifts = {
 	"dog4" : ["Chew Toy", "Ladybird", "Burger Jumper"], #cockapoo
 	"bird1" : ["Berries", "Egg", "Nest Hat"],
 	"snail" : ["Slime", "Burger", "Bow Tie"],
-	"dog5" : ["Frog", "Rabbit Toy", "Cow Jumper"] #bernese mountain dog
+	"dog5" : ["Frog", "Rabbit Toy", "Cow Jumper"], #bernese mountain dog
+	"nigel" : ["Popcorn", "Potion", "Wizard Hat"]
 }
 
 var giftDescriptions = {
@@ -131,8 +133,11 @@ var giftDescriptions = {
 	"Burger" : "A burger! Where did it find this?",
 	"Bow Tie" : "Can be worn. Makes you look fancy.",
 	"Frog" : "What the hell it's literally just a frog.",
-	"Rabbit Toy" : "Little cute stuffed rabbit toy that doubles up as a hot water bottle.",
-	"Cow Jumper" : "Can be worn. It's an awesome jumper with a cow on it!"
+	"Rabbit Toy" : "Can also be used as a hot water bottle.",
+	"Cow Jumper" : "Can be worn. It's an awesome jumper with a cow on it!",
+	"Popcorn" : "Tasty popcorn, an excellent snack.",
+	"Potion" : "A funky little groovy potion. Hopefully no side effects!",
+	"Wizard Hat" : "Can be worn. The greatest wizard hat of all time."
 }
 
 

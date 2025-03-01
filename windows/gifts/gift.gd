@@ -16,7 +16,7 @@ var giftNum : int
 var giftName : String
 var giftDescription : String
 
-var tradeRequirements = [20, 10, 0]
+var tradeRequirements = [20, 10, 2]
 
 var quantity : int
 
@@ -29,20 +29,16 @@ func _ready() -> void:
 	Sprite.frame = giftNum
 	Panel_AnimationPlayer.play(rarities[rarityNum])
 	
-	if rarityNum < 2:
-		Label_TradeRequirements.text = "You have: " + type_convert(quantity, TYPE_STRING) + "/" + type_convert(tradeRequirements[rarityNum], TYPE_STRING) + " to trade"
-		if quantity >= tradeRequirements[rarityNum]:
-			Progress_Bar.get_node("AnimationPlayer").play("highlight")
-		Progress_Bar.max_value = tradeRequirements[rarityNum]
-		Progress_Bar.value = quantity
-	else:
-		Label_TradeRequirements.text = "You have: " + type_convert(quantity, TYPE_STRING)
-		Progress_Bar.hide()
+	Label_TradeRequirements.text = "You have: " + type_convert(quantity, TYPE_STRING) + "/" + type_convert(tradeRequirements[rarityNum], TYPE_STRING) + " to trade"
+	if quantity >= tradeRequirements[rarityNum]:
+		Progress_Bar.get_node("AnimationPlayer").play("highlight")
+	Progress_Bar.max_value = tradeRequirements[rarityNum]
+	Progress_Bar.value = quantity
 
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and mouse_in:
-		if rarityNum < 2 and quantity >= tradeRequirements[rarityNum]:
+		if quantity >= tradeRequirements[rarityNum]:
 			#give new random gift of higher rarity
 			#decrease quantity of gift
 			quantity -= tradeRequirements[rarityNum]

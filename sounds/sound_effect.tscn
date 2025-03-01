@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bxmnjwtnipwx3"]
+[gd_scene load_steps=69 format=3 uid="uid://bxmnjwtnipwx3"]
 
 [ext_resource type="Script" path="res://sounds/sound_effect.gd" id="1_p5sfn"]
 [ext_resource type="AudioStream" uid="uid://7myckm6a4hvv" path="res://assets/sounds/project_complete.mp3" id="2_0ief3"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://yxclc3dimrhd" path="res://assets/sounds/bear_roar1.mp3" id="2_nu2uw"]
 [ext_resource type="AudioStream" uid="uid://r8brp8jc5gyu" path="res://assets/sounds/daytime_birds.mp3" id="2_smqyd"]
 [ext_resource type="AudioStream" uid="uid://ci0c4cwfy1hiy" path="res://assets/sounds/rabbit.mp3" id="2_v7151"]
+[ext_resource type="AudioStream" uid="uid://0omnmf6cik4y" path="res://assets/sounds/nigel.mp3" id="2_xeoov"]
 [ext_resource type="AudioStream" uid="uid://c0mfrxpawckrf" path="res://assets/sounds/water_ambience.mp3" id="2_xlg6p"]
 [ext_resource type="AudioStream" uid="uid://c61b7ffdjvuvv" path="res://assets/sounds/cat_meow2.mp3" id="5_bx5sf"]
 [ext_resource type="AudioStream" uid="uid://bya6vkqydkuuv" path="res://assets/sounds/cat_meow3.mp3" id="6_gotxm"]
@@ -1853,6 +1854,57 @@ tracks/3/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_7x32g"]
+resource_name = "nigel_squeak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:stream")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_xeoov")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7ij75"]
 _data = {
 "RESET": SubResource("Animation_e8ote"),
@@ -1877,6 +1929,7 @@ _data = {
 "fireplace_lit": SubResource("Animation_p3j6y"),
 "guinea_pig_squeak1": SubResource("Animation_03ltj"),
 "morning_birds": SubResource("Animation_dtiu5"),
+"nigel_squeak": SubResource("Animation_7x32g"),
 "night_ambience": SubResource("Animation_hfg8g"),
 "paper_move1": SubResource("Animation_2t0ad"),
 "paper_move2": SubResource("Animation_i6pwa"),
@@ -1896,7 +1949,7 @@ _data = {
 script = ExtResource("1_p5sfn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_idi6b")
+stream = ExtResource("2_xeoov")
 volume_db = -5.0
 pitch_scale = 0.2
 
