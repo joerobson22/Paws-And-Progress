@@ -1,0 +1,295 @@
+[gd_scene load_steps=13 format=3 uid="uid://v88oanagx88u"]
+
+[ext_resource type="Script" path="res://windows/character-customisation/character_customisation.gd" id="1_4tvj4"]
+[ext_resource type="PackedScene" uid="uid://cuehceqlilqr0" path="res://windows/main/aura.tscn" id="2_foidy"]
+[ext_resource type="PackedScene" uid="uid://sjwpojun0ldl" path="res://human/human.tscn" id="2_l1svo"]
+[ext_resource type="PackedScene" uid="uid://bxm8otw4dlu6q" path="res://windows/character-customisation/tone.tscn" id="3_3q4kb"]
+[ext_resource type="Texture2D" uid="uid://buvebrq8fwpit" path="res://assets/misc/tube.png" id="3_ibxmo"]
+[ext_resource type="PackedScene" uid="uid://btpsq0pkyop8" path="res://windows/home_button.tscn" id="4_d7tpu"]
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="4_x8vhd"]
+[ext_resource type="FontFile" uid="uid://cveouj21bacwl" path="res://assets/fonts/Daniel-Black.otf" id="5_uo33v"]
+[ext_resource type="PackedScene" uid="uid://3taofa2bnyv0" path="res://windows/character-customisation/scroller.tscn" id="7_fh4iu"]
+
+[sub_resource type="Animation" id="Animation_nls2w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_673je"]
+resource_name = "in"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.873298, 0.873298, 0.873298, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u3s0s"]
+_data = {
+"RESET": SubResource("Animation_nls2w"),
+"in": SubResource("Animation_673je")
+}
+
+[node name="Character-Customisation" type="Node2D"]
+script = ExtResource("1_4tvj4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -400.0
+offset_top = -1033.0
+offset_right = 1600.0
+offset_bottom = 1400.0
+color = Color(0, 0, 0, 0.682353)
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Human" type="Node2D" parent="Buttons"]
+position = Vector2(300, 350)
+
+[node name="human" type="Button" parent="Buttons/Human"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -143.0
+offset_top = -117.0
+offset_right = 79.0
+offset_bottom = 298.0
+
+[node name="Skin_Tones" type="Node2D" parent="Buttons"]
+position = Vector2(275, 170)
+scale = Vector2(0.75, 0.75)
+
+[node name="Background" type="Sprite2D" parent="Buttons/Skin_Tones"]
+position = Vector2(-12.3333, 0)
+scale = Vector2(1.50412, 2)
+texture = ExtResource("3_ibxmo")
+
+[node name="Tones" type="Node2D" parent="Buttons/Skin_Tones"]
+
+[node name="Tone1" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.92549, 0.768627, 0.764706, 1)
+position = Vector2(-200, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone2" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.886275, 0.698039, 0.615686, 1)
+position = Vector2(-125, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone3" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.776471, 0.576471, 0.396078, 1)
+position = Vector2(-50, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone4" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.545098, 0.384314, 0.235294, 1)
+position = Vector2(25, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone5" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.290196, 0.196078, 0.105882, 1)
+position = Vector2(100, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone6" parent="Buttons/Skin_Tones/Tones" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.141149, 0.0869598, 0.0360661, 1)
+position = Vector2(175, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Skin_Tone_Label" type="Node2D" parent="Buttons/Skin_Tones"]
+position = Vector2(-90, 30)
+scale = Vector2(1.33333, 1.33333)
+
+[node name="Label" type="Label" parent="Buttons/Skin_Tones/Skin_Tone_Label"]
+offset_left = -125.0
+offset_top = -80.0
+offset_right = 245.0
+offset_bottom = -38.0
+theme_override_fonts/font = ExtResource("4_x8vhd")
+theme_override_font_sizes/font_size = 30
+text = "Skin Tone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hair_Colours" type="Node2D" parent="Buttons"]
+position = Vector2(800, 170)
+scale = Vector2(0.75, 0.75)
+
+[node name="Background" type="Sprite2D" parent="Buttons/Hair_Colours"]
+position = Vector2(13.6666, 0)
+scale = Vector2(1.51235, 2)
+texture = ExtResource("3_ibxmo")
+
+[node name="Colours" type="Node2D" parent="Buttons/Hair_Colours"]
+
+[node name="Tone1" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.999782, 0.948496, 0.767984, 1)
+position = Vector2(-175, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone2" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.952913, 0.922184, 0.542478, 1)
+position = Vector2(-100, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone3" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(1, 0.568236, 0.378405, 1)
+position = Vector2(-25, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone4" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.545098, 0.384314, 0.235294, 1)
+position = Vector2(50, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone5" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(0.290196, 0.196078, 0.105882, 1)
+position = Vector2(125, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Tone6" parent="Buttons/Hair_Colours/Colours" instance=ExtResource("3_3q4kb")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(200, 2.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Hair_Colour_Label" type="Node2D" parent="Buttons/Hair_Colours"]
+position = Vector2(-100, -80)
+scale = Vector2(1.33333, 1.33333)
+
+[node name="Label" type="Label" parent="Buttons/Hair_Colours/Hair_Colour_Label"]
+offset_left = -97.0
+offset_right = 269.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("4_x8vhd")
+theme_override_font_sizes/font_size = 30
+text = "Hair Colour"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Home_Button" parent="Buttons" instance=ExtResource("4_d7tpu")]
+position = Vector2(111, 48)
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Title_Label" type="Node2D" parent="Labels"]
+
+[node name="Label" type="Label" parent="Labels/Title_Label"]
+offset_right = 1152.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("5_uo33v")
+theme_override_font_sizes/font_size = 55
+text = "Character Customisation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Display" type="Node2D" parent="."]
+position = Vector2(270, 450)
+
+[node name="Aura" parent="Display" instance=ExtResource("2_foidy")]
+modulate = Color(1, 1, 1, 0.529412)
+
+[node name="Human" parent="Display" instance=ExtResource("2_l1svo")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Display"]
+libraries = {
+"": SubResource("AnimationLibrary_u3s0s")
+}
+
+[node name="Customisation_Scrollers" type="Node2D" parent="."]
+
+[node name="Hat_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(500, 270)
+scale = Vector2(0.75, 0.75)
+
+[node name="Hair_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(650, 270)
+scale = Vector2(0.75, 0.75)
+
+[node name="Face_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(800, 270)
+scale = Vector2(0.75, 0.75)
+
+[node name="Jumper_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(500, 400)
+scale = Vector2(0.75, 0.75)
+
+[node name="Neckwear_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(650, 400)
+scale = Vector2(0.75, 0.75)
+
+[node name="Handwear_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(800, 400)
+scale = Vector2(0.75, 0.75)
+
+[node name="WalkingStick_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(500, 530)
+scale = Vector2(0.75, 0.75)
+
+[node name="Trousers_Scroller" parent="Customisation_Scrollers" instance=ExtResource("7_fh4iu")]
+position = Vector2(650, 530)
+scale = Vector2(0.75, 0.75)
+
+[connection signal="mouse_entered" from="Buttons/Human/human" to="." method="_on_human_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Human/human" to="." method="_on_human_mouse_exited"]
+[connection signal="pressed" from="Buttons/Human/human" to="." method="_on_human_pressed"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone1" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone2" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone3" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone4" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone5" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Skin_Tones/Tones/Tone6" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone1" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone2" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone3" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone4" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone5" to="." method="update_human"]
+[connection signal="updateHuman" from="Buttons/Hair_Colours/Colours/Tone6" to="." method="update_human"]
+[connection signal="pressed" from="Buttons/Home_Button" to="." method="_on_home_button_pressed"]
+[connection signal="update_human" from="Customisation_Scrollers/Hat_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Hair_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Face_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Jumper_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Neckwear_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Handwear_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/WalkingStick_Scroller" to="." method="update_human"]
+[connection signal="update_human" from="Customisation_Scrollers/Trousers_Scroller" to="." method="update_human"]

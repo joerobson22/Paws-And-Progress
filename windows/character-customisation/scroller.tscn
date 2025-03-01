@@ -1,0 +1,366 @@
+[gd_scene load_steps=30 format=3 uid="uid://3taofa2bnyv0"]
+
+[ext_resource type="Script" path="res://windows/character-customisation/scroller.gd" id="1_abmbi"]
+[ext_resource type="Texture2D" uid="uid://mw5rdvc7tyi5" path="res://assets/choose-focus/arrow.png" id="1_e8fs5"]
+[ext_resource type="Texture2D" uid="uid://mlbnif1imahc" path="res://assets/character-customisation/hair.png" id="2_v8wt8"]
+[ext_resource type="Texture2D" uid="uid://dccveebs06w1m" path="res://assets/misc/icon.svg" id="4_8a124"]
+[ext_resource type="Texture2D" uid="uid://dn12k5sdspfh3" path="res://assets/character-customisation/face.png" id="5_h7yrp"]
+[ext_resource type="Texture2D" uid="uid://cnjggmjk8fha3" path="res://assets/misc/aura.png" id="5_n2lm6"]
+[ext_resource type="Texture2D" uid="uid://sw5oyq1cfps8" path="res://assets/character-customisation/hats.png" id="7_awbfj"]
+[ext_resource type="Texture2D" uid="uid://dllxqippme3eq" path="res://assets/character-customisation/handwear.png" id="7_kakv8"]
+[ext_resource type="Texture2D" uid="uid://b8xv7g61vwlw4" path="res://assets/character-customisation/jumpers.png" id="7_pihua"]
+[ext_resource type="Texture2D" uid="uid://b3u0vbg0k3lyl" path="res://assets/character-customisation/trousers.png" id="8_ddm2e"]
+[ext_resource type="Texture2D" uid="uid://dnhohnnirjbox" path="res://assets/character-customisation/neckwear.png" id="10_rl0ms"]
+[ext_resource type="Texture2D" uid="uid://beyyao0otf8wp" path="res://assets/character-customisation/walking_stick.png" id="12_na4ei"]
+
+[sub_resource type="Animation" id="Animation_62md8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.267, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1nenv"]
+resource_name = "in"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.267, -1), Vector2(0.401, -1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.920995, 0.920995, 0.920995, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdb2f"]
+_data = {
+"RESET": SubResource("Animation_62md8"),
+"in": SubResource("Animation_1nenv")
+}
+
+[sub_resource type="Animation" id="Animation_jg8gh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.267, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a166v"]
+resource_name = "in"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.267, 1), Vector2(0.401, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.912289, 0.912289, 0.912289, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tna4o"]
+_data = {
+"RESET": SubResource("Animation_jg8gh"),
+"in": SubResource("Animation_a166v")
+}
+
+[sub_resource type="Animation" id="Animation_ifmvc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_yl0tu"]
+resource_name = "accessory"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_8a124")]
+}
+
+[sub_resource type="Animation" id="Animation_yimwy"]
+resource_name = "face"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_h7yrp")]
+}
+
+[sub_resource type="Animation" id="Animation_gomyk"]
+resource_name = "hair"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_v8wt8")]
+}
+
+[sub_resource type="Animation" id="Animation_7at2l"]
+resource_name = "handwear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_kakv8")]
+}
+
+[sub_resource type="Animation" id="Animation_pdr4l"]
+resource_name = "hat"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_awbfj")]
+}
+
+[sub_resource type="Animation" id="Animation_vamst"]
+resource_name = "jumper"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_pihua")]
+}
+
+[sub_resource type="Animation" id="Animation_k70s5"]
+resource_name = "neckwear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_rl0ms")]
+}
+
+[sub_resource type="Animation" id="Animation_fq6ir"]
+resource_name = "trousers"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_ddm2e")]
+}
+
+[sub_resource type="Animation" id="Animation_v4m07"]
+resource_name = "walking_stick"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_na4ei")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ywmu0"]
+_data = {
+"RESET": SubResource("Animation_ifmvc"),
+"accessory": SubResource("Animation_yl0tu"),
+"face": SubResource("Animation_yimwy"),
+"hair": SubResource("Animation_gomyk"),
+"handwear": SubResource("Animation_7at2l"),
+"hat": SubResource("Animation_pdr4l"),
+"jumper": SubResource("Animation_vamst"),
+"neckwear": SubResource("Animation_k70s5"),
+"trousers": SubResource("Animation_fq6ir"),
+"walking_stick": SubResource("Animation_v4m07")
+}
+
+[node name="Scroller" type="Node2D"]
+position = Vector2(530, 225)
+script = ExtResource("1_abmbi")
+
+[node name="Backing" type="Sprite2D" parent="."]
+modulate = Color(0.843137, 0.843137, 0.843137, 0.658824)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_n2lm6")
+
+[node name="Arrows" type="Node2D" parent="."]
+scale = Vector2(1.5, 1.5)
+
+[node name="Left_Arrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(-50, 0)
+rotation = 3.14159
+scale = Vector2(0.267, -1)
+texture = ExtResource("1_e8fs5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrows/Left_Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_sdb2f")
+}
+
+[node name="Right_Arrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(50, 0)
+scale = Vector2(0.267, 1)
+texture = ExtResource("1_e8fs5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrows/Right_Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_tna4o")
+}
+
+[node name="Style" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Style"]
+libraries = {
+"": SubResource("AnimationLibrary_ywmu0")
+}
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Left" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -89.0
+offset_top = -48.0
+offset_right = -62.0
+offset_bottom = 50.0
+
+[node name="Right" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 63.0
+offset_top = -48.0
+offset_right = 90.0
+offset_bottom = 50.0
+
+[connection signal="mouse_entered" from="Buttons/Left" to="." method="_on_left_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Left" to="." method="_on_left_mouse_exited"]
+[connection signal="pressed" from="Buttons/Left" to="." method="_on_left_pressed"]
+[connection signal="mouse_entered" from="Buttons/Right" to="." method="_on_right_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Right" to="." method="_on_right_mouse_exited"]
+[connection signal="pressed" from="Buttons/Right" to="." method="_on_right_pressed"]

@@ -1,0 +1,177 @@
+[gd_scene load_steps=16 format=3 uid="uid://8e6j2pi8s7i7"]
+
+[ext_resource type="Texture2D" uid="uid://bpyq61voptr6n" path="res://assets/focus/lake/log/belowlog2.png" id="1_c22mu"]
+[ext_resource type="Texture2D" uid="uid://dkfqxjfjho0g2" path="res://assets/focus/lake/log/belowlog1.png" id="1_tvcc0"]
+[ext_resource type="Script" path="res://windows/focus/focus-time/log.gd" id="1_xyut5"]
+[ext_resource type="Texture2D" uid="uid://cki0seuw1whc7" path="res://assets/focus/lake/log/abovelog1.png" id="2_3p2xd"]
+[ext_resource type="Texture2D" uid="uid://ym0n1umasn37" path="res://assets/focus/lake/log/belowlog3.png" id="2_f514l"]
+[ext_resource type="Texture2D" uid="uid://q72e738idq7f" path="res://assets/focus/lake/log/abovelog2.png" id="2_jry8m"]
+[ext_resource type="Texture2D" uid="uid://b3x5h71gepkqn" path="res://assets/focus/lake/log/abovelog3.png" id="3_k3r5g"]
+
+[sub_resource type="Animation" id="Animation_116fj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/Below_Water:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f514l")]
+}
+
+[sub_resource type="Animation" id="Animation_bg5ij"]
+resource_name = "log1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/Below_Water:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_tvcc0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/Above_Water:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_3p2xd")]
+}
+
+[sub_resource type="Animation" id="Animation_1arfw"]
+resource_name = "log2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/Below_Water:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c22mu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/Above_Water:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_jry8m")]
+}
+
+[sub_resource type="Animation" id="Animation_igg4v"]
+resource_name = "log3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/Below_Water:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f514l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/Above_Water:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_k3r5g")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_egcar"]
+_data = {
+"RESET": SubResource("Animation_116fj"),
+"log1": SubResource("Animation_bg5ij"),
+"log2": SubResource("Animation_1arfw"),
+"log3": SubResource("Animation_igg4v")
+}
+
+[sub_resource type="Animation" id="Animation_pfyos"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_yc6v8"]
+resource_name = "bob"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpuy5"]
+_data = {
+"RESET": SubResource("Animation_pfyos"),
+"bob": SubResource("Animation_yc6v8")
+}
+
+[node name="Log" type="Node2D"]
+script = ExtResource("1_xyut5")
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(0.5, 0.5)
+
+[node name="Below_Water" type="Sprite2D" parent="Sprites"]
+z_index = -1
+texture = ExtResource("2_f514l")
+centered = false
+
+[node name="Above_Water" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("3_k3r5g")
+centered = false
+
+[node name="Log_Type" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_egcar")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tpuy5")
+}

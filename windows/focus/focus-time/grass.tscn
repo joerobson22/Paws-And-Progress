@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhktjmy4u8k5x"]
+
+[ext_resource type="Texture2D" uid="uid://7kicigo6slj5" path="res://assets/focus/land/grass3.png" id="1_id8t6"]
+[ext_resource type="Texture2D" uid="uid://dwvv376klj3ah" path="res://assets/focus/land/grass1.png" id="1_nwjlx"]
+[ext_resource type="Texture2D" uid="uid://d8knk0wb2clj" path="res://assets/focus/land/grass2.png" id="3_m01id"]
+
+[sub_resource type="Animation" id="Animation_gb5cn"]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_nwjlx")]
+}
+
+[sub_resource type="Animation" id="Animation_wufjo"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_m01id")]
+}
+
+[sub_resource type="Animation" id="Animation_bbufe"]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_id8t6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xr2ve"]
+_data = {
+"1": SubResource("Animation_gb5cn"),
+"2": SubResource("Animation_wufjo"),
+"3": SubResource("Animation_bbufe")
+}
+
+[node name="Grass" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_id8t6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xr2ve")
+}

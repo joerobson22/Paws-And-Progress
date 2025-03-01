@@ -1,0 +1,817 @@
+[gd_scene load_steps=37 format=3 uid="uid://cvgpmh5laqkya"]
+
+[ext_resource type="Script" path="res://windows/focus/focus-time/focus_time.gd" id="1_phghm"]
+[ext_resource type="Script" path="res://windows/focus/focus-time/timer.gd" id="2_ab2fv"]
+[ext_resource type="PackedScene" uid="uid://dgrmgwo0ds81o" path="res://windows/focus/focus-time/parallax_background.tscn" id="2_ny1vb"]
+[ext_resource type="PackedScene" uid="uid://dbqvnrl5nhacv" path="res://animal/animal.tscn" id="3_eklxg"]
+[ext_resource type="PackedScene" uid="uid://bmrd4gnfxi4gd" path="res://windows/focus/end-focus/end_focus.tscn" id="3_tkt40"]
+[ext_resource type="PackedScene" uid="uid://sjwpojun0ldl" path="res://human/human.tscn" id="4_qhx1i"]
+[ext_resource type="Texture2D" uid="uid://ce6q06meewu5c" path="res://assets/focus/icons/finish2.png" id="4_rc221"]
+[ext_resource type="Texture2D" uid="uid://c7v5rqxox1u6t" path="res://assets/focus/icons/pause.png" id="6_xa7h7"]
+[ext_resource type="FontFile" uid="uid://cveouj21bacwl" path="res://assets/fonts/Daniel-Black.otf" id="8_5fqdg"]
+[ext_resource type="Texture2D" uid="uid://dqd3hejlpe4qr" path="res://assets/misc/aura2.png" id="8_d3esp"]
+[ext_resource type="PackedScene" uid="uid://cvr75iy54tiij" path="res://windows/transition.tscn" id="10_cqebs"]
+[ext_resource type="PackedScene" uid="uid://d1kwqg3q45i" path="res://windows/mute_button.tscn" id="12_qcudg"]
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="13_b6kk0"]
+[ext_resource type="FontFile" uid="uid://r4sxbgrmy3g1" path="res://assets/fonts/daniel.ttf" id="14_xa4w6"]
+
+[sub_resource type="Animation" id="Animation_m1j01"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal/Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal/Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 590)]
+}
+
+[sub_resource type="Animation" id="Animation_mno2p"]
+resource_name = "bear1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(700, 550)]
+}
+
+[sub_resource type="Animation" id="Animation_bjqt4"]
+resource_name = "bird1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(420, 455)]
+}
+
+[sub_resource type="Animation" id="Animation_x0eao"]
+resource_name = "cat1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_a13os"]
+resource_name = "dog1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 590)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_n6nqt"]
+resource_name = "dog2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 580)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_kmns8"]
+resource_name = "dog3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(650, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+
+[sub_resource type="Animation" id="Animation_cgg7g"]
+resource_name = "dog4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 580)]
+}
+
+[sub_resource type="Animation" id="Animation_0gun6"]
+resource_name = "guinea_pig1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(525, 590)]
+}
+
+[sub_resource type="Animation" id="Animation_oetpy"]
+resource_name = "rabbit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 590)]
+}
+
+[sub_resource type="Animation" id="Animation_m3dar"]
+resource_name = "snail"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Foreground/Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Foreground/Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, 600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bvw0"]
+_data = {
+"RESET": SubResource("Animation_m1j01"),
+"bear1": SubResource("Animation_mno2p"),
+"bird1": SubResource("Animation_bjqt4"),
+"cat1": SubResource("Animation_x0eao"),
+"dog1": SubResource("Animation_a13os"),
+"dog2": SubResource("Animation_n6nqt"),
+"dog3": SubResource("Animation_kmns8"),
+"dog4": SubResource("Animation_cgg7g"),
+"guinea_pig1": SubResource("Animation_0gun6"),
+"rabbit": SubResource("Animation_oetpy"),
+"snail": SubResource("Animation_m3dar")
+}
+
+[sub_resource type="Animation" id="Animation_i5mij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Timer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mluqv"]
+resource_name = "end_focus"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -800)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Timer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qho6k"]
+_data = {
+"RESET": SubResource("Animation_i5mij"),
+"end_focus": SubResource("Animation_mluqv")
+}
+
+[sub_resource type="Animation" id="Animation_ntk4w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [72]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5xu0m"]
+resource_name = "pause"
+length = 0.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [72, 65]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.458824)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b1b61"]
+_data = {
+"RESET": SubResource("Animation_ntk4w"),
+"pause": SubResource("Animation_5xu0m")
+}
+
+[sub_resource type="Animation" id="Animation_gn03q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_11ju1"]
+resource_name = "in"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.925353, 0.925353, 0.925353, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ddi55"]
+_data = {
+"RESET": SubResource("Animation_gn03q"),
+"in": SubResource("Animation_11ju1")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdcwq"]
+bg_color = Color(0.173276, 0.264389, 0.179957, 0.627451)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.392197, 0.138566, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Focus-Time" type="Node2D"]
+script = ExtResource("1_phghm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Node2D" parent="HBoxContainer"]
+position = Vector2(556, 304)
+
+[node name="Parallax_Background" parent="HBoxContainer/Background" instance=ExtResource("2_ny1vb")]
+
+[node name="Foreground" type="Node2D" parent="HBoxContainer"]
+position = Vector2(0, 15)
+
+[node name="Human" parent="HBoxContainer/Foreground" instance=ExtResource("4_qhx1i")]
+position = Vector2(429, 518)
+scale = Vector2(0.6, 0.6)
+
+[node name="Animal" type="Node2D" parent="HBoxContainer/Foreground"]
+position = Vector2(600, 590)
+scale = Vector2(0.6, 0.6)
+
+[node name="Animal" parent="HBoxContainer/Foreground/Animal" instance=ExtResource("3_eklxg")]
+scale = Vector2(1, 1)
+
+[node name="Animal_Position_AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Foreground"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_6bvw0")
+}
+
+[node name="End_Focus" parent="HBoxContainer/Foreground" instance=ExtResource("3_tkt40")]
+position = Vector2(0, -800)
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/Foreground"]
+anchor_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Foreground/Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_qho6k")
+}
+
+[node name="Light" type="ColorRect" parent="HBoxContainer/Foreground/Camera2D"]
+visible = false
+z_index = 1
+offset_left = -114.0
+offset_top = -69.0
+offset_right = 1260.0
+offset_bottom = 795.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Transition" parent="HBoxContainer/Foreground/Camera2D" instance=ExtResource("10_cqebs")]
+z_index = 20
+position = Vector2(576, 324)
+
+[node name="Timer" type="Node2D" parent="HBoxContainer/Foreground"]
+z_index = 1
+position = Vector2(556, 54)
+script = ExtResource("2_ab2fv")
+
+[node name="Label" type="Label" parent="HBoxContainer/Foreground/Timer"]
+offset_left = -557.0
+offset_top = -53.0
+offset_right = 598.0
+offset_bottom = 132.0
+theme_override_fonts/font = ExtResource("8_5fqdg")
+theme_override_font_sizes/font_size = 72
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Foreground/Timer"]
+libraries = {
+"": SubResource("AnimationLibrary_b1b61")
+}
+
+[node name="Buttons" type="Node2D" parent="HBoxContainer/Foreground"]
+z_index = 1
+position = Vector2(556, 304)
+
+[node name="End_Focus" type="Node2D" parent="HBoxContainer/Foreground/Buttons"]
+modulate = Color(1, 1, 1, 0.690196)
+position = Vector2(550, 290)
+
+[node name="Control" type="Control" parent="HBoxContainer/Foreground/Buttons/End_Focus"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 34.0
+offset_bottom = 35.0
+
+[node name="Sprites" type="Node2D" parent="HBoxContainer/Foreground/Buttons/End_Focus"]
+
+[node name="Back2" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/End_Focus/Sprites"]
+modulate = Color(0.894118, 0.890196, 0.886275, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_d3esp")
+
+[node name="Back" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/End_Focus/Sprites"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_d3esp")
+
+[node name="Icon" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/End_Focus/Sprites"]
+modulate = Color(0.324368, 0.324344, 0.335791, 1)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_rc221")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Foreground/Buttons/End_Focus"]
+libraries = {
+"": SubResource("AnimationLibrary_ddi55")
+}
+
+[node name="Pause_Focus" type="Node2D" parent="HBoxContainer/Foreground/Buttons"]
+modulate = Color(1, 1, 1, 0.690196)
+position = Vector2(550, 200)
+
+[node name="Control" type="Control" parent="HBoxContainer/Foreground/Buttons/Pause_Focus"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -34.0
+offset_top = -35.0
+offset_right = 34.0
+offset_bottom = 35.0
+
+[node name="Sprites" type="Node2D" parent="HBoxContainer/Foreground/Buttons/Pause_Focus"]
+
+[node name="Back2" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/Pause_Focus/Sprites"]
+modulate = Color(0.894235, 0.889717, 0.886715, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_d3esp")
+
+[node name="Back" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/Pause_Focus/Sprites"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_d3esp")
+
+[node name="Icon" type="Sprite2D" parent="HBoxContainer/Foreground/Buttons/Pause_Focus/Sprites"]
+modulate = Color(0.32549, 0.32549, 0.337255, 1)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_xa7h7")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Foreground/Buttons/Pause_Focus"]
+libraries = {
+"": SubResource("AnimationLibrary_ddi55")
+}
+
+[node name="Mute_Button" parent="HBoxContainer/Foreground/Buttons" instance=ExtResource("12_qcudg")]
+modulate = Color(1, 1, 1, 0.690196)
+position = Vector2(550, 110)
+
+[node name="Working_On" type="Label" parent="HBoxContainer/Foreground"]
+offset_top = 115.0
+offset_right = 1173.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource("13_b6kk0")
+theme_override_font_sizes/font_size = 40
+text = "Working on x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gift_Probabilities" type="Node2D" parent="HBoxContainer/Foreground"]
+position = Vector2(1042, 3)
+scale = Vector2(0.75, 0.75)
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Foreground/Gift_Probabilities"]
+offset_left = -107.0
+offset_top = 9.0
+offset_right = 138.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kdcwq")
+
+[node name="Title" type="Label" parent="HBoxContainer/Foreground/Gift_Probabilities/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 241.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("13_b6kk0")
+theme_override_font_sizes/font_size = 20
+text = "Gift Rarity Chances:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Common_Chance" type="Label" parent="HBoxContainer/Foreground/Gift_Probabilities/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 29.0
+offset_right = 239.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.4, 0.85098, 0, 1)
+theme_override_fonts/font = ExtResource("14_xa4w6")
+theme_override_font_sizes/font_size = 20
+text = "Common: X%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rare_Chance" type="Label" parent="HBoxContainer/Foreground/Gift_Probabilities/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 55.0
+offset_right = 240.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0.691795, 0.888709, 1)
+theme_override_fonts/font = ExtResource("14_xa4w6")
+theme_override_font_sizes/font_size = 20
+text = "Rare: X%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Epic_Chance" type="Label" parent="HBoxContainer/Foreground/Gift_Probabilities/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 83.0
+offset_right = 240.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.693247, 0.410129, 1, 1)
+theme_override_fonts/font = ExtResource("14_xa4w6")
+theme_override_font_sizes/font_size = 20
+text = "Epic: X%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="die_parent" from="HBoxContainer/Foreground/End_Focus" to="." method="_on_end_focus_die_parent"]
+[connection signal="done" from="HBoxContainer/Foreground/Camera2D/Transition" to="." method="_on_transition_done"]
+[connection signal="mouse_entered" from="HBoxContainer/Foreground/Buttons/End_Focus/Control" to="." method="end_focus_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Foreground/Buttons/End_Focus/Control" to="." method="end_focus_mouse_exited"]
+[connection signal="mouse_entered" from="HBoxContainer/Foreground/Buttons/Pause_Focus/Control" to="." method="pause_focus_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Foreground/Buttons/Pause_Focus/Control" to="." method="pause_focus_mouse_exited"]

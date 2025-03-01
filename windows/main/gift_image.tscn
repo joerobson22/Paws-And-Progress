@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://pdlb7mmyjik2"]
+
+[ext_resource type="Texture2D" uid="uid://su53208q3d62" path="res://assets/main/main-menu/shelves/gift.png" id="1_vrude"]
+
+[node name="Gift_Image" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vrude")

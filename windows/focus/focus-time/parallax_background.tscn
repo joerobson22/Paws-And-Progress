@@ -1,0 +1,2219 @@
+[gd_scene load_steps=51 format=3 uid="uid://dgrmgwo0ds81o"]
+
+[ext_resource type="Texture2D" uid="uid://0xc1ymfu8s6y" path="res://assets/focus/sky/sun.png" id="1_omnwm"]
+[ext_resource type="Texture2D" uid="uid://dge44gjpakxue" path="res://assets/focus/trees/back_tree1.png" id="1_vsocc"]
+[ext_resource type="Texture2D" uid="uid://c30cxs6084rtf" path="res://assets/focus/trees/back_tree5.png" id="2_gaaph"]
+[ext_resource type="Texture2D" uid="uid://dsghs16rn5qr5" path="res://assets/focus/sky/moon.png" id="2_na3e4"]
+[ext_resource type="Texture2D" uid="uid://b0vyvbpd7pn3y" path="res://assets/focus/trees/back_tree2.png" id="3_jqy4x"]
+[ext_resource type="Texture2D" uid="uid://bmsw03j0dx5mr" path="res://assets/focus/sky/star.png" id="4_msi3c"]
+[ext_resource type="Texture2D" uid="uid://b4b0yxyfubqgs" path="res://assets/focus/trees/back_tree3.png" id="4_tc8fg"]
+[ext_resource type="Texture2D" uid="uid://cdsm7ues458lt" path="res://assets/focus/trees/back_tree4.png" id="5_uq7py"]
+[ext_resource type="Texture2D" uid="uid://bkhorelefm8r6" path="res://assets/focus/rocks/back_rock1.png" id="6_11rid"]
+[ext_resource type="Texture2D" uid="uid://caun2y7u611kj" path="res://assets/focus/rocks/back_rock2.png" id="6_vxfag"]
+[ext_resource type="Texture2D" uid="uid://8hl58ngn2qf2" path="res://assets/focus/rocks/back_rock5.png" id="9_iu3rt"]
+[ext_resource type="Texture2D" uid="uid://bctyw1hjjetiy" path="res://assets/focus/rocks/medium_rock4.png" id="11_w40sx"]
+[ext_resource type="Texture2D" uid="uid://bca5mbj1fmc81" path="res://assets/focus/rocks/medium_rock2.png" id="12_ftce8"]
+[ext_resource type="Texture2D" uid="uid://bcnn5ttk22fjg" path="res://assets/focus/lake/lake2.png" id="13_2eoqm"]
+[ext_resource type="Texture2D" uid="uid://crcgvt0hep722" path="res://assets/focus/lake/lake.png" id="13_30qyn"]
+[ext_resource type="Texture2D" uid="uid://cfdgmxhw2bub2" path="res://assets/focus/rocks/medium_rock5.png" id="13_bxpey"]
+[ext_resource type="Texture2D" uid="uid://t6yid2qo64om" path="res://assets/focus/rocks/medium_rock3.png" id="14_p50kn"]
+[ext_resource type="Texture2D" uid="uid://dqd3hejlpe4qr" path="res://assets/misc/aura2.png" id="15_rs2f1"]
+[ext_resource type="PackedScene" uid="uid://8e6j2pi8s7i7" path="res://windows/focus/focus-time/log.tscn" id="15_ujcvi"]
+[ext_resource type="PackedScene" uid="uid://daeoumeu7ptqm" path="res://windows/focus/focus-time/rock.tscn" id="17_m5vnt"]
+[ext_resource type="PackedScene" uid="uid://nltao8enf51c" path="res://windows/focus/focus-time/land.tscn" id="18_ew2dk"]
+[ext_resource type="Texture2D" uid="uid://cwbslgmrlowg3" path="res://assets/focus/roof/roof.png" id="19_p4nuv"]
+[ext_resource type="Texture2D" uid="uid://bdrekk0fjxhns" path="res://assets/focus/land/ground.png" id="20_v030i"]
+[ext_resource type="Texture2D" uid="uid://dr14v76ykfrc3" path="res://assets/focus/rocks/medium_rock1.png" id="20_wgvqh"]
+[ext_resource type="Texture2D" uid="uid://c8bveorv571yq" path="res://assets/focus/land/path.png" id="21_lfh4n"]
+[ext_resource type="PackedScene" uid="uid://bhktjmy4u8k5x" path="res://windows/focus/focus-time/grass.tscn" id="22_inqpu"]
+[ext_resource type="PackedScene" uid="uid://d0m4olnk2mggd" path="res://windows/focus/focus-time/firefly.tscn" id="22_t7or3"]
+[ext_resource type="PackedScene" uid="uid://djwys7201tv8y" path="res://windows/focus/focus-time/tree.tscn" id="24_6ajl0"]
+[ext_resource type="Texture2D" uid="uid://e82qbpv8ob4k" path="res://assets/focus/roof/roof2.png" id="27_3wccr"]
+
+[sub_resource type="Animation" id="Animation_qna0s"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_hfb26"]
+resource_name = "day"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.497393, 0.857819, 0.954591, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun_or_Moon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_omnwm")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun_or_Moon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(800, -600)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sun_or_Moon:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun_or_Moon:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.960784, 0.709804, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun_or_Moon/Aura:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sun_or_Moon/Aura:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.75, 1.75)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sun_or_Moon/Aura:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.415686)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sun_or_Moon/Aura2:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sun_or_Moon/Aura2:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sun_or_Moon/Aura2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.415686)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stars:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7pcse"]
+resource_name = "evening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0324286, 0.223446, 0.436741, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun_or_Moon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, -200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun_or_Moon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sun_or_Moon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_na3e4")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun_or_Moon:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.513726, 0.505882, 0.517647, 0.784314)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun_or_Moon/Aura:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(12, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sun_or_Moon/Aura:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sun_or_Moon/Aura2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sun_or_Moon/Aura2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.4, 1.4)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sun_or_Moon/Aura2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.341176)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Stars:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stars:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.203922)]
+}
+
+[sub_resource type="Animation" id="Animation_c2nqx"]
+resource_name = "morning"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.189139, 0.576461, 0.751298, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun_or_Moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.940022, 0.568127, 0.690196)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun_or_Moon:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_omnwm")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sun_or_Moon:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun_or_Moon:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(625, -250)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun_or_Moon/Aura:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sun_or_Moon/Aura:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.7, 1.7)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sun_or_Moon/Aura:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.219608)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sun_or_Moon/Aura2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.8, 1.8)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sun_or_Moon/Aura2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sun_or_Moon/Aura2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.231373)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stars:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Stars:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0588235)]
+}
+
+[sub_resource type="Animation" id="Animation_5smsa"]
+resource_name = "night"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.00767901, 0.098183, 0.2156, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun_or_Moon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun_or_Moon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, -550)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sun_or_Moon:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.713726, 0.705882, 0.717647, 0.815686)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sun_or_Moon/Aura:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sun_or_Moon/Aura:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sun_or_Moon/Aura:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.333333)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sun_or_Moon/Aura2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sun_or_Moon/Aura2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.8, 1.8)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sun_or_Moon/Aura2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.266667)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sun_or_Moon:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_na3e4")]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stars:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Stars:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_udegk"]
+_data = {
+"RESET": SubResource("Animation_qna0s"),
+"day": SubResource("Animation_hfb26"),
+"evening": SubResource("Animation_7pcse"),
+"morning": SubResource("Animation_c2nqx"),
+"night": SubResource("Animation_5smsa")
+}
+
+[sub_resource type="Animation" id="Animation_ctgmj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.121569, 0.439216, 0.576471, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jjx45"]
+resource_name = "day"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.027451, 0.172549, 0.286275, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ebasr"]
+resource_name = "evening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0196078, 0.168627, 0.337255, 0.482353)]
+}
+
+[sub_resource type="Animation" id="Animation_efjlk"]
+resource_name = "morning"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0721216, 0.302881, 0.402467, 0.458824)]
+}
+
+[sub_resource type="Animation" id="Animation_m1a1l"]
+resource_name = "night"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.00392157, 0.0470588, 0.12549, 0.8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lj6gq"]
+_data = {
+"RESET": SubResource("Animation_ctgmj"),
+"day": SubResource("Animation_jjx45"),
+"evening": SubResource("Animation_ebasr"),
+"morning": SubResource("Animation_efjlk"),
+"night": SubResource("Animation_m1a1l")
+}
+
+[sub_resource type="Animation" id="Animation_ftqcj"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_pludm"]
+resource_name = "day"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.357844, 0.910718, 0.980306, 0.886275)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lake_Components:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vmjgv"]
+resource_name = "evening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.170003, 0.678336, 0.919372, 0.52549)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lake_Components:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.724643, 0.724643, 0.724643, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_81gyp"]
+resource_name = "morning"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.157259, 0.665279, 0.904923, 0.858824)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lake_Components:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f03qi"]
+resource_name = "night"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.00784314, 0.196078, 0.282353, 0.788235)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lake_Components:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.517184, 0.517184, 0.517184, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0jx1r"]
+_data = {
+"RESET": SubResource("Animation_ftqcj"),
+"day": SubResource("Animation_pludm"),
+"evening": SubResource("Animation_vmjgv"),
+"morning": SubResource("Animation_81gyp"),
+"night": SubResource("Animation_f03qi")
+}
+
+[sub_resource type="Animation" id="Animation_0id4f"]
+resource_name = "day"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.819608, 0.207843)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.819608, 0.211765)]
+}
+
+[sub_resource type="Animation" id="Animation_wo18s"]
+resource_name = "night"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.380392)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.380392)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_255kk"]
+_data = {
+"day": SubResource("Animation_0id4f"),
+"night": SubResource("Animation_wo18s")
+}
+
+[node name="Parallax_Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Fog" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/Fog"]
+offset_left = -6.0
+offset_top = -1.0
+offset_right = 1161.0
+offset_bottom = 717.0
+color = Color(0.560784, 0.815686, 0.839216, 1)
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/Sky"]
+offset_left = -20.0
+offset_top = -927.0
+offset_right = 1161.0
+offset_bottom = -1.0
+color = Color(0.00767901, 0.098183, 0.2156, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Sky"]
+libraries = {
+"": SubResource("AnimationLibrary_udegk")
+}
+
+[node name="Stars" type="Node2D" parent="ParallaxBackground/Sky"]
+position = Vector2(0, -500)
+
+[node name="Star1" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(191, -117)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star1"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star1"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star1"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star2" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(675, 234)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star2"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star2"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star2"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star3" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(970, -151)
+scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star3"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star3"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star3"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star4" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(883, 189)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star4"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star4"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star4"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star5" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(138, 223)
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star5"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star5"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star5"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star6" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(350, 294)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star6"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star6"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star6"]
+texture = ExtResource("4_msi3c")
+
+[node name="Star7" type="Node2D" parent="ParallaxBackground/Sky/Stars"]
+position = Vector2(64, 35)
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star7"]
+modulate = Color(1, 1, 1, 0.247059)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star7"]
+modulate = Color(1, 1, 1, 0.266667)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_msi3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky/Stars/Star7"]
+texture = ExtResource("4_msi3c")
+
+[node name="Sun_or_Moon" type="Sprite2D" parent="ParallaxBackground/Sky"]
+modulate = Color(0.713726, 0.705882, 0.717647, 0.815686)
+position = Vector2(600, -550)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_na3e4")
+
+[node name="Aura" type="Sprite2D" parent="ParallaxBackground/Sky/Sun_or_Moon"]
+modulate = Color(1, 1, 1, 0.333333)
+show_behind_parent = true
+position = Vector2(11, 5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_rs2f1")
+
+[node name="Aura2" type="Sprite2D" parent="ParallaxBackground/Sky/Sun_or_Moon"]
+modulate = Color(1, 1, 1, 0.266667)
+show_behind_parent = true
+position = Vector2(11, 5)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("15_rs2f1")
+
+[node name="Trees_Far" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.45098, 0.670588, 0.72549, 1)
+z_index = 1
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Trees_Far"]
+position = Vector2(990, -10)
+scale = Vector2(0.4, 0.9)
+texture = ExtResource("1_vsocc")
+centered = false
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Trees_Far"]
+position = Vector2(575, -4)
+scale = Vector2(0.5, 0.855469)
+texture = ExtResource("3_jqy4x")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Trees_Far"]
+position = Vector2(170, -4)
+scale = Vector2(0.5, 0.838)
+texture = ExtResource("4_tc8fg")
+centered = false
+
+[node name="Tree4" type="Sprite2D" parent="ParallaxBackground/Trees_Far"]
+position = Vector2(23, -5)
+scale = Vector2(0.5, 0.822266)
+texture = ExtResource("2_gaaph")
+centered = false
+
+[node name="Tree5" type="Sprite2D" parent="ParallaxBackground/Trees_Far"]
+position = Vector2(678, -1)
+scale = Vector2(0.761719, 0.898)
+texture = ExtResource("5_uq7py")
+centered = false
+
+[node name="Rocks_Far" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.419647, 0.637565, 0.691843, 1)
+z_index = 2
+position = Vector2(0, -120)
+motion_scale = Vector2(0.125, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Rock1" type="Sprite2D" parent="ParallaxBackground/Rocks_Far"]
+position = Vector2(81, 345)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_11rid")
+centered = false
+
+[node name="Rock2" type="Sprite2D" parent="ParallaxBackground/Rocks_Far"]
+position = Vector2(392, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_vxfag")
+centered = false
+
+[node name="Rock3" type="Sprite2D" parent="ParallaxBackground/Rocks_Far"]
+position = Vector2(785, 273)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_iu3rt")
+centered = false
+
+[node name="Trees_Medium" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.379706, 0.591876, 0.644493, 1)
+z_index = 3
+position = Vector2(0, -50)
+motion_scale = Vector2(0.15, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Trees_Medium"]
+position = Vector2(820, 8)
+scale = Vector2(0.8, 0.878125)
+texture = ExtResource("2_gaaph")
+centered = false
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Trees_Medium"]
+position = Vector2(386, 40)
+scale = Vector2(0.9, 0.99375)
+texture = ExtResource("1_vsocc")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Trees_Medium"]
+position = Vector2(57, 37)
+scale = Vector2(0.75, 0.839844)
+texture = ExtResource("5_uq7py")
+centered = false
+
+[node name="Rocks_Medium" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.681329, 0.74118, 0.425443, 1)
+z_index = 4
+position = Vector2(0, -100)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Rock1" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.93408, 0.93408, 0.93408, 1)
+position = Vector2(19, 312)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_p50kn")
+centered = false
+
+[node name="Rock2" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+position = Vector2(305, 354)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock3" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.93408, 0.93408, 0.93408, 1)
+position = Vector2(979, 340)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_bxpey")
+centered = false
+
+[node name="Rock4" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.93408, 0.93408, 0.93408, 1)
+position = Vector2(591, 352)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_ftce8")
+centered = false
+
+[node name="Rock5" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.877615, 0.877616, 0.877616, 1)
+position = Vector2(1838, 316)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_p50kn")
+centered = false
+
+[node name="Rock6" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.91664, 0.91664, 0.91664, 1)
+position = Vector2(1392, 293)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock7" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.830335, 0.830335, 0.830335, 1)
+position = Vector2(1628, 358)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_ftce8")
+centered = false
+
+[node name="Rock8" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.91664, 0.91664, 0.91664, 1)
+position = Vector2(2156, 410)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock9" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.982343, 0.982342, 0.982342, 1)
+position = Vector2(2651, 249)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_bxpey")
+centered = false
+
+[node name="Rock10" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.986752, 0.986752, 0.986752, 1)
+position = Vector2(2399, 370)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock11" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+position = Vector2(2989, 443)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_p50kn")
+centered = false
+
+[node name="Rock12" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+position = Vector2(3046, 325)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_p50kn")
+centered = false
+
+[node name="Rock13" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.982343, 0.982342, 0.982342, 1)
+position = Vector2(3391, 258)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_bxpey")
+centered = false
+
+[node name="Rock14" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.91664, 0.91664, 0.91664, 1)
+position = Vector2(3811, 363)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock15" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+position = Vector2(3657, 359)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_ftce8")
+centered = false
+
+[node name="Rock16" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+position = Vector2(4046, 366)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_ftce8")
+centered = false
+
+[node name="Rock17" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.843184, 0.843184, 0.843184, 1)
+position = Vector2(4272, 248)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_p50kn")
+centered = false
+
+[node name="Rock18" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.91664, 0.91664, 0.91664, 1)
+position = Vector2(4556, 336)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_w40sx")
+centered = false
+
+[node name="Rock19" type="Sprite2D" parent="ParallaxBackground/Rocks_Medium"]
+modulate = Color(0.982343, 0.982342, 0.982342, 1)
+position = Vector2(4795, 347)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_bxpey")
+centered = false
+
+[node name="Fog_Medium" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 4
+motion_scale = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/Fog_Medium"]
+offset_left = -7.0
+offset_top = -1.0
+offset_right = 1161.0
+offset_bottom = 717.0
+color = Color(0.121569, 0.439216, 0.576471, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Fog_Medium"]
+libraries = {
+"": SubResource("AnimationLibrary_lj6gq")
+}
+
+[node name="Lake_Opaque" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.144197, 0.222093, 0.588179, 1)
+z_index = 5
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(10000, 0)
+
+[node name="Sprite1" type="Sprite2D" parent="ParallaxBackground/Lake_Opaque"]
+self_modulate = Color(0.313808, 0.895387, 1, 1)
+position = Vector2(0, 385)
+scale = Vector2(1, 0.8)
+texture = ExtResource("13_2eoqm")
+centered = false
+
+[node name="Sprite2" type="Sprite2D" parent="ParallaxBackground/Lake_Opaque"]
+self_modulate = Color(0.313808, 0.895387, 1, 1)
+position = Vector2(5000, 385)
+scale = Vector2(1, 0.8)
+texture = ExtResource("13_2eoqm")
+centered = false
+
+[node name="Lake_Transparent" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.357844, 0.910718, 0.980306, 0.886275)
+z_index = 7
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(10000, 0)
+
+[node name="Sprite1" type="Sprite2D" parent="ParallaxBackground/Lake_Transparent"]
+position = Vector2(0, 385)
+scale = Vector2(1, 0.8)
+texture = ExtResource("13_30qyn")
+centered = false
+
+[node name="Sprite2" type="Sprite2D" parent="ParallaxBackground/Lake_Transparent"]
+position = Vector2(5000, 385)
+scale = Vector2(1, 0.8)
+texture = ExtResource("13_30qyn")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Lake_Transparent"]
+libraries = {
+"": SubResource("AnimationLibrary_0jx1r")
+}
+
+[node name="Light" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 7
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Light1" type="Node2D" parent="ParallaxBackground/Light"]
+modulate = Color(1, 1, 0.819608, 0.207843)
+
+[node name="Light1" type="Node2D" parent="ParallaxBackground/Light/Light1"]
+z_index = -3
+
+[node name="Line2D" type="Line2D" parent="ParallaxBackground/Light/Light1/Light1"]
+points = PackedVector2Array(845, 456, 1261, -33)
+width = 75.0
+
+[node name="Line2D2" type="Line2D" parent="ParallaxBackground/Light/Light1/Light1"]
+points = PackedVector2Array(845, 456, 1261, -33)
+width = 35.0
+
+[node name="Light2" type="Node2D" parent="ParallaxBackground/Light/Light1"]
+z_index = -3
+position = Vector2(80, 0)
+
+[node name="Line2D" type="Line2D" parent="ParallaxBackground/Light/Light1/Light2"]
+points = PackedVector2Array(831, 470, 1261, -33)
+width = 20.0
+
+[node name="Line2D2" type="Line2D" parent="ParallaxBackground/Light/Light1/Light2"]
+points = PackedVector2Array(831, 470, 1261, -33)
+width = 5.0
+
+[node name="Water_Effect1" type="Sprite2D" parent="ParallaxBackground/Light/Light1"]
+modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(911.5, 406)
+scale = Vector2(1.676, 0.208)
+texture = ExtResource("15_rs2f1")
+
+[node name="Water_Effect2" type="Sprite2D" parent="ParallaxBackground/Light/Light1"]
+modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(912, 399)
+scale = Vector2(1.296, 0.136)
+texture = ExtResource("15_rs2f1")
+
+[node name="Light2" type="Node2D" parent="ParallaxBackground/Light"]
+modulate = Color(1, 1, 0.819608, 0.211765)
+position = Vector2(750, 0)
+
+[node name="Light1" type="Node2D" parent="ParallaxBackground/Light/Light2"]
+z_index = -3
+
+[node name="Line2D" type="Line2D" parent="ParallaxBackground/Light/Light2/Light1"]
+points = PackedVector2Array(928, 431, 1215, -10)
+width = 35.0
+
+[node name="Line2D2" type="Line2D" parent="ParallaxBackground/Light/Light2/Light1"]
+points = PackedVector2Array(928, 431, 1215, -10)
+
+[node name="Light2" type="Node2D" parent="ParallaxBackground/Light/Light2"]
+z_index = -3
+position = Vector2(35, 0)
+
+[node name="Line2D" type="Line2D" parent="ParallaxBackground/Light/Light2/Light2"]
+points = PackedVector2Array(928, 431, 1215, -10)
+width = 5.0
+
+[node name="Line2D2" type="Line2D" parent="ParallaxBackground/Light/Light2/Light2"]
+points = PackedVector2Array(928, 431, 1215, -10)
+width = 2.0
+
+[node name="Water_Effect1" type="Sprite2D" parent="ParallaxBackground/Light/Light2"]
+modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(960.25, 397)
+scale = Vector2(1.198, 0.116)
+texture = ExtResource("15_rs2f1")
+
+[node name="Water_Effect2" type="Sprite2D" parent="ParallaxBackground/Light/Light2"]
+modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(963, 391)
+scale = Vector2(0.656, 0.06)
+texture = ExtResource("15_rs2f1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Light"]
+libraries = {
+"": SubResource("AnimationLibrary_255kk")
+}
+
+[node name="Lake_Components" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 7
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(20000, 0)
+
+[node name="Logs" type="Node2D" parent="ParallaxBackground/Lake_Components"]
+
+[node name="Log1" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(124, 358)
+
+[node name="Log2" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(1255, 336)
+
+[node name="Log3" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(2305, 412)
+
+[node name="Log4" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(5046, 354)
+
+[node name="Log5" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(5307, 391)
+
+[node name="Log6" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(6757, 382)
+
+[node name="Log7" parent="ParallaxBackground/Lake_Components/Logs" instance=ExtResource("15_ujcvi")]
+position = Vector2(8456, 409)
+
+[node name="Rocks" type="Node2D" parent="ParallaxBackground/Lake_Components"]
+z_index = 1
+
+[node name="Rock1" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(371, 346)
+
+[node name="Rock2" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(1151, 408)
+
+[node name="Rock3" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(1849, 321)
+
+[node name="Rock4" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(3354, 410)
+
+[node name="Rock5" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(5694, 344)
+
+[node name="Rock6" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(7065, 345)
+
+[node name="Rock7" parent="ParallaxBackground/Lake_Components/Rocks" instance=ExtResource("17_m5vnt")]
+position = Vector2(8112, 323)
+
+[node name="Land" type="Node2D" parent="ParallaxBackground/Lake_Components"]
+z_index = 1
+
+[node name="Land1" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(781, 261)
+scale = Vector2(1, 1)
+
+[node name="Land2" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(3130, 246)
+scale = Vector2(1, 1)
+
+[node name="Land3" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(4161, 253)
+scale = Vector2(1, 1)
+
+[node name="Land4" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(4497, 297)
+scale = Vector2(1, 1)
+
+[node name="Land5" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(7808, 255)
+scale = Vector2(1, 1)
+
+[node name="Land6" parent="ParallaxBackground/Lake_Components/Land" instance=ExtResource("18_ew2dk")]
+position = Vector2(9606, 240)
+scale = Vector2(1, 1)
+
+[node name="Forest_Roof_Medium" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.225211, 0.423903, 0.166362, 1)
+z_index = 8
+position = Vector2(0, -25)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Roof1" type="Node2D" parent="ParallaxBackground/Forest_Roof_Medium"]
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof1"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(256, 0)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof1"]
+position = Vector2(3, -8)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof1"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(269, -7)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof1"]
+modulate = Color(0.838897, 0.838897, 0.838897, 1)
+position = Vector2(600, -4)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof1"]
+position = Vector2(645, -12)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Node2D" parent="ParallaxBackground/Forest_Roof_Medium"]
+position = Vector2(1250, 0)
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof2"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(75, -3)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Medium/Roof2"]
+position = Vector2(174, -8)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Birds" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 8
+
+[node name="Shore_Close" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 9
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(4608, 0)
+
+[node name="Rocks" type="Node2D" parent="ParallaxBackground/Shore_Close"]
+
+[node name="Rock1" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.412152, 0.412152, 0.412152, 1)
+position = Vector2(115, 497)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("20_wgvqh")
+
+[node name="Rock2" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
+position = Vector2(481, 516)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_w40sx")
+
+[node name="Rock3" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.442911, 0.442911, 0.442911, 1)
+position = Vector2(654, 426)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_bxpey")
+
+[node name="Rock4" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.359069, 0.359069, 0.359069, 1)
+position = Vector2(1112, 494)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_p50kn")
+
+[node name="Rock5" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.321728, 0.321728, 0.321728, 1)
+position = Vector2(1326, 489)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_bxpey")
+
+[node name="Rock6" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1207, 496)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_p50kn")
+
+[node name="Rock7" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(2191, 528)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_p50kn")
+
+[node name="Rock8" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.481789, 0.48179, 0.481789, 1)
+position = Vector2(2315, 541)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_p50kn")
+
+[node name="Rock9" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.41598, 0.41598, 0.41598, 1)
+position = Vector2(2729, 488)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("20_wgvqh")
+
+[node name="Rock10" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.41598, 0.41598, 0.41598, 1)
+position = Vector2(2894, 516)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_wgvqh")
+
+[node name="Rock11" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.385492, 0.385493, 0.385492, 1)
+position = Vector2(3198, 449)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_bxpey")
+
+[node name="Rock12" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.408329, 0.40833, 0.408329, 1)
+position = Vector2(3412, 501)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_ftce8")
+
+[node name="Rock13" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.43134, 0.43134, 0.43134, 1)
+position = Vector2(3281, 469)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("20_wgvqh")
+
+[node name="Rock14" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.351563, 0.351563, 0.351563, 1)
+position = Vector2(3902, 511)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_w40sx")
+
+[node name="Rock15" type="Sprite2D" parent="ParallaxBackground/Shore_Close/Rocks"]
+modulate = Color(0.396889, 0.396889, 0.396889, 1)
+position = Vector2(4054, 494)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_p50kn")
+
+[node name="Grassy" type="Node2D" parent="ParallaxBackground/Shore_Close"]
+modulate = Color(0.244668, 0.59286, 0.332019, 1)
+position = Vector2(0, 100)
+
+[node name="Grass1" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(37, 450)
+
+[node name="Grass2" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(248, 465)
+
+[node name="Grass3" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(552, 421)
+
+[node name="Grass4" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1047, 423)
+
+[node name="Grass5" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1130, 424)
+
+[node name="Grass6" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1155, 427)
+
+[node name="Grass7" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1264, 433)
+
+[node name="Grass8" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1291, 434)
+
+[node name="Grass9" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1317, 435)
+
+[node name="Grass10" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(1675, 446)
+
+[node name="Grass11" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2122, 441)
+
+[node name="Grass12" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2242, 456)
+
+[node name="Grass13" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2263, 457)
+
+[node name="Grass14" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2801, 432)
+
+[node name="Grass15" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2825, 434)
+
+[node name="Grass16" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(2849, 436)
+
+[node name="Grass17" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(3192, 434)
+
+[node name="Grass18" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(3478, 432)
+
+[node name="Grass19" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(3688, 442)
+
+[node name="Grass20" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(3961, 449)
+
+[node name="Grass21" parent="ParallaxBackground/Shore_Close/Grassy" instance=ExtResource("22_inqpu")]
+position = Vector2(3982, 447)
+
+[node name="Land_Close" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 10
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(4608, 0)
+
+[node name="Ground" type="Node2D" parent="ParallaxBackground/Land_Close"]
+modulate = Color(0.180392, 0.454902, 0.25098, 1)
+position = Vector2(0, 475)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Land_Close/Ground"]
+scale = Vector2(1, 0.8)
+texture = ExtResource("20_v030i")
+centered = false
+
+[node name="Path" type="Node2D" parent="ParallaxBackground/Land_Close"]
+modulate = Color(0.817393, 0.786844, 0.651228, 1)
+position = Vector2(0, 575)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Land_Close/Path"]
+scale = Vector2(1, 0.25)
+texture = ExtResource("21_lfh4n")
+centered = false
+
+[node name="Grass" type="Node2D" parent="ParallaxBackground/Land_Close"]
+modulate = Color(0.202249, 0.503423, 0.279804, 1)
+position = Vector2(146, 595)
+
+[node name="Grass1" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(-62, -9)
+
+[node name="Grass2" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(26, 84)
+
+[node name="Grass3" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(221, 13)
+
+[node name="Grass4" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(562, -83)
+
+[node name="Grass5" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(344, -61)
+
+[node name="Grass6" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(687, 69)
+
+[node name="Grass7" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(979, -20)
+
+[node name="Grass8" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(546, 33)
+
+[node name="Grass9" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1292, -12)
+
+[node name="Grass10" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1706, 17)
+
+[node name="Grass11" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1293, 76)
+
+[node name="Grass12" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1569, 93)
+
+[node name="Grass13" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1799, -55)
+
+[node name="Grass14" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(1234, -57)
+
+[node name="Grass15" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2056, 30)
+
+[node name="Grass16" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2308, -10)
+
+[node name="Grass17" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2513, -53)
+
+[node name="Grass18" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2232, 93)
+
+[node name="Grass19" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2637, 50)
+
+[node name="Grass20" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2885, -40)
+
+[node name="Grass21" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2909, 38)
+
+[node name="Grass22" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(2947, 19)
+
+[node name="Grass23" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3058, 6)
+
+[node name="Grass24" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3212, 77)
+
+[node name="Grass25" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3450, -21)
+
+[node name="Grass26" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3488, 25)
+
+[node name="Grass27" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3732, 74)
+
+[node name="Grass28" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3813, 88)
+
+[node name="Grass29" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(3943, 12)
+
+[node name="Grass30" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(4011, -5)
+
+[node name="Grass31" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(4252, -38)
+
+[node name="Grass32" parent="ParallaxBackground/Land_Close/Grass" instance=ExtResource("22_inqpu")]
+modulate = Color(0.877616, 0.877616, 0.877616, 1)
+position = Vector2(4396, 73)
+
+[node name="Fireflies" type="Node2D" parent="ParallaxBackground/Land_Close"]
+
+[node name="Firefly1" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(1090, 335)
+
+[node name="Firefly2" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(1130, 362)
+
+[node name="Firefly3" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(2108, 147)
+
+[node name="Firefly4" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(2155, 178)
+
+[node name="Firefly5" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(2014, 211)
+
+[node name="Firefly6" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(2184, 296)
+
+[node name="Firefly7" parent="ParallaxBackground/Land_Close/Fireflies" instance=ExtResource("22_t7or3")]
+position = Vector2(2105, 243)
+
+[node name="Trees_Close" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 11
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(9261, 0)
+
+[node name="Tree1" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+position = Vector2(-38, -71)
+
+[node name="Tree2" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+modulate = Color(0.737193, 0.737193, 0.737193, 1)
+position = Vector2(1589, -85)
+
+[node name="Tree3" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+position = Vector2(1969, -68)
+
+[node name="Tree4" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+modulate = Color(0.925353, 0.925353, 0.925353, 1)
+position = Vector2(2398, -66)
+
+[node name="Tree5" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+position = Vector2(3640, -61)
+
+[node name="Tree6" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(4025, -80)
+
+[node name="Tree7" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+modulate = Color(0.838897, 0.838897, 0.838897, 1)
+position = Vector2(5996, -83)
+
+[node name="Tree8" parent="ParallaxBackground/Trees_Close" instance=ExtResource("24_6ajl0")]
+position = Vector2(6304, -76)
+
+[node name="Forest_Roof_Close" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.374502, 0.692085, 0.28042, 1)
+z_index = 12
+position = Vector2(0, -25)
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(4608, 0)
+
+[node name="Roof1" type="Node2D" parent="ParallaxBackground/Forest_Roof_Close"]
+
+[node name="Roof3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof1"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(331, -172)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof1"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(521, -35)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof1"]
+position = Vector2(500, -157)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Roof2" type="Node2D" parent="ParallaxBackground/Forest_Roof_Close"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(2780, 46)
+
+[node name="Roof3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof2"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(86, -73)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof2"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(594, -95)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Roof4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof2"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(436, -50)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof2"]
+position = Vector2(194, -42)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof2"]
+position = Vector2(365, -114)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Roof3" type="Node2D" parent="ParallaxBackground/Forest_Roof_Close"]
+modulate = Color(0.907942, 0.907942, 0.907942, 1)
+position = Vector2(3532, 24)
+
+[node name="Roof3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof3"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(229, -64)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof3"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(264, -29)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof3"]
+position = Vector2(60, -50)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof4" type="Node2D" parent="ParallaxBackground/Forest_Roof_Close"]
+modulate = Color(0.907942, 0.907942, 0.907942, 1)
+position = Vector2(2035, 11)
+
+[node name="Roof3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof4"]
+modulate = Color(0.716296, 0.716296, 0.716296, 1)
+position = Vector2(235, -17)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof4"]
+modulate = Color(0.886262, 0.886261, 0.886262, 1)
+position = Vector2(324, -42)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Roof2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Close/Roof4"]
+position = Vector2(192, -39)
+texture = ExtResource("19_p4nuv")
+centered = false
+
+[node name="Forest_Roof_Over" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.372549, 0.690196, 0.282353, 1)
+z_index = 13
+motion_mirroring = Vector2(2304, 0)
+
+[node name="Layer1" type="Node2D" parent="ParallaxBackground/Forest_Roof_Over"]
+modulate = Color(0.787759, 0.787759, 0.787759, 1)
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(364, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+position = Vector2(-29, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+position = Vector2(712, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(1182, -212)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+modulate = Color(0.89059, 0.89059, 0.89059, 1)
+position = Vector2(1617, -233)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree6" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer1"]
+modulate = Color(0.920995, 0.920995, 0.920994, 1)
+position = Vector2(1872, -218)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Layer2" type="Node2D" parent="ParallaxBackground/Forest_Roof_Over"]
+modulate = Color(0.856067, 0.856067, 0.856067, 1)
+position = Vector2(-132, 33)
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(364, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+position = Vector2(-29, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+position = Vector2(712, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(1182, -212)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+modulate = Color(0.89059, 0.89059, 0.89059, 1)
+position = Vector2(1617, -233)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree6" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer2"]
+modulate = Color(0.920995, 0.920995, 0.920994, 1)
+position = Vector2(1872, -218)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Layer3" type="Node2D" parent="ParallaxBackground/Forest_Roof_Over"]
+modulate = Color(0.920995, 0.920995, 0.920995, 1)
+position = Vector2(186, 63)
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(364, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+position = Vector2(-29, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+position = Vector2(712, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(1182, -212)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+modulate = Color(0.89059, 0.89059, 0.89059, 1)
+position = Vector2(1617, -233)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree6" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer3"]
+modulate = Color(0.920995, 0.920995, 0.920994, 1)
+position = Vector2(1872, -218)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Layer4" type="Node2D" parent="ParallaxBackground/Forest_Roof_Over"]
+position = Vector2(-126, 93)
+
+[node name="Tree2" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(364, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree1" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+position = Vector2(-29, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree3" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+position = Vector2(712, -221)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree4" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(1182, -212)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree5" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+modulate = Color(0.89059, 0.89059, 0.89059, 1)
+position = Vector2(1617, -233)
+texture = ExtResource("27_3wccr")
+centered = false
+
+[node name="Tree6" type="Sprite2D" parent="ParallaxBackground/Forest_Roof_Over/Layer4"]
+modulate = Color(0.920995, 0.920995, 0.920994, 1)
+position = Vector2(1872, -218)
+texture = ExtResource("27_3wccr")
+centered = false

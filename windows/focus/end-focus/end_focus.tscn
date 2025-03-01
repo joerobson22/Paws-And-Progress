@@ -1,0 +1,223 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmrd4gnfxi4gd"]
+
+[ext_resource type="Script" path="res://windows/focus/end-focus/end_focus.gd" id="1_5861l"]
+[ext_resource type="PackedScene" uid="uid://7f310vajy2io" path="res://windows/focus/end-focus/given_gift.tscn" id="2_154c6"]
+[ext_resource type="FontFile" uid="uid://cveouj21bacwl" path="res://assets/fonts/Daniel-Black.otf" id="2_m3284"]
+[ext_resource type="Texture2D" uid="uid://bymxurjjgwxa1" path="res://assets/choose-focus/home.png" id="2_xhhxy"]
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="3_u52sv"]
+
+[sub_resource type="Animation" id="Animation_2ebja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [30]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tf5e5"]
+resource_name = "in"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30, 35]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.93845, 0.93845, 0.93845, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dc6rx"]
+_data = {
+"RESET": SubResource("Animation_2ebja"),
+"in": SubResource("Animation_tf5e5")
+}
+
+[sub_resource type="Animation" id="Animation_f5lrk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lhvhp"]
+resource_name = "in"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1.75, 1.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.920995, 0.920995, 0.920995, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8par5"]
+_data = {
+"RESET": SubResource("Animation_f5lrk"),
+"in": SubResource("Animation_lhvhp")
+}
+
+[node name="End-Focus" type="Node2D"]
+script = ExtResource("1_5861l")
+
+[node name="Labels" type="Node2D" parent="."]
+position = Vector2(556, 304)
+
+[node name="Title_Label" type="Node2D" parent="Labels"]
+position = Vector2(0, -300)
+
+[node name="Label" type="Label" parent="Labels/Title_Label"]
+offset_left = -557.0
+offset_right = 597.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("2_m3284")
+theme_override_font_sizes/font_size = 70
+text = "Focus Time Finished!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Total_Time_Label" type="Node2D" parent="Labels"]
+position = Vector2(0, -200)
+
+[node name="Label" type="Label" parent="Labels/Total_Time_Label"]
+offset_left = -557.0
+offset_right = 597.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("3_u52sv")
+theme_override_font_sizes/font_size = 40
+text = "Total Time: 00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(556, 304)
+
+[node name="Complete_Button" type="Node2D" parent="Buttons"]
+position = Vector2(200, 280)
+
+[node name="Label" type="Label" parent="Buttons/Complete_Button"]
+offset_left = -120.0
+offset_top = -24.0
+offset_right = 122.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("3_u52sv")
+theme_override_font_sizes/font_size = 30
+text = "Project Complete!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Buttons/Complete_Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -123.0
+offset_top = -23.0
+offset_right = 178.0
+offset_bottom = 17.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Complete_Button"]
+libraries = {
+"": SubResource("AnimationLibrary_dc6rx")
+}
+
+[node name="Main_Menu_Button" type="Node2D" parent="Buttons"]
+position = Vector2(-200, 270)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Main_Menu_Button"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_xhhxy")
+
+[node name="Control" type="Control" parent="Buttons/Main_Menu_Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -34.0
+offset_top = -38.0
+offset_right = 36.0
+offset_bottom = 34.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Main_Menu_Button"]
+libraries = {
+"": SubResource("AnimationLibrary_8par5")
+}
+
+[node name="Gift" parent="." instance=ExtResource("2_154c6")]
+position = Vector2(556, 304)
+
+[connection signal="mouse_entered" from="Buttons/Complete_Button/Control" to="." method="complete_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Complete_Button/Control" to="." method="complete_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Main_Menu_Button/Control" to="." method="home_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Main_Menu_Button/Control" to="." method="home_mouse_exited"]

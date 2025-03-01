@@ -1,0 +1,222 @@
+[gd_scene load_steps=10 format=3 uid="uid://7f310vajy2io"]
+
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="1_441jl"]
+[ext_resource type="Texture2D" uid="uid://ds52iu25so7kc" path="res://assets/gifts/gifts/gifts.png" id="1_i3gxx"]
+[ext_resource type="Texture2D" uid="uid://dqd3hejlpe4qr" path="res://assets/misc/aura2.png" id="2_0b6bh"]
+
+[sub_resource type="Animation" id="Animation_abuji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.607843, 0.243137, 1, 0.847059)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Gift:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Gift:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+
+[sub_resource type="Animation" id="Animation_geuor"]
+resource_name = "common"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.360784, 0.631373, 0.313726, 0.894118)]
+}
+
+[sub_resource type="Animation" id="Animation_027il"]
+resource_name = "epic"
+length = 5.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.52549, 0.32549, 0.992157, 1), Color(0.607843, 0.243137, 1, 0.847059), Color(0.701961, 0.262745, 1, 0.847059), Color(0.803922, 0.290196, 1, 0.956863), Color(0.564706, 0.32549, 0.764706, 0.847059)]
+}
+
+[sub_resource type="Animation" id="Animation_nguyy"]
+resource_name = "rare"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.178107, 0.502723, 0.783469, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3irq6"]
+resource_name = "wiggle"
+length = 4.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1.52, 1.52), Vector2(1.5, 1.5), Vector2(1.52, 1.52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Gift:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Gift:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0872665, 0.0, -0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7sdu"]
+_data = {
+"RESET": SubResource("Animation_abuji"),
+"common": SubResource("Animation_geuor"),
+"epic": SubResource("Animation_027il"),
+"rare": SubResource("Animation_nguyy"),
+"wiggle": SubResource("Animation_3irq6")
+}
+
+[node name="Gift" type="Node2D"]
+
+[node name="You_Received_Label" type="Node2D" parent="."]
+position = Vector2(0, -50)
+
+[node name="Label" type="Label" parent="You_Received_Label"]
+offset_left = -556.0
+offset_right = 596.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_441jl")
+theme_override_font_sizes/font_size = 35
+text = "You Received..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gift_Label" type="Node2D" parent="."]
+position = Vector2(0, 175)
+
+[node name="Label" type="Label" parent="Gift_Label"]
+offset_left = -556.0
+offset_right = 596.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_441jl")
+theme_override_font_sizes/font_size = 35
+text = "Gift!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gift" type="Sprite2D" parent="."]
+position = Vector2(0, 75)
+rotation = 0.0872665
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_i3gxx")
+hframes = 64
+
+[node name="Shine" type="Node2D" parent="."]
+modulate = Color(0.607843, 0.243137, 1, 0.847059)
+show_behind_parent = true
+position = Vector2(0, 75)
+scale = Vector2(1.5, 1.5)
+
+[node name="Back" type="Sprite2D" parent="Shine"]
+modulate = Color(1, 1, 1, 0.321569)
+texture = ExtResource("2_0b6bh")
+
+[node name="Middle" type="Sprite2D" parent="Shine"]
+modulate = Color(1, 1, 1, 0.419608)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_0b6bh")
+
+[node name="Front" type="Sprite2D" parent="Shine"]
+modulate = Color(1, 1, 1, 0.592157)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_0b6bh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shine"]
+libraries = {
+"": SubResource("AnimationLibrary_w7sdu")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Shine"]
+libraries = {
+"": SubResource("AnimationLibrary_w7sdu")
+}

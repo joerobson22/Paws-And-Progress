@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://nltao8enf51c"]
+
+[ext_resource type="Texture2D" uid="uid://dnirfnh5o61mr" path="res://assets/focus/lake/land/below_land2.png" id="1_6e78d"]
+[ext_resource type="Script" path="res://windows/focus/focus-time/land.gd" id="1_hvx3s"]
+[ext_resource type="Texture2D" uid="uid://dyyyok5h48dds" path="res://assets/focus/lake/land/below_land1.png" id="1_qx03k"]
+[ext_resource type="Texture2D" uid="uid://bsd4bfdtt6iu2" path="res://assets/focus/lake/land/above_land2.png" id="2_dp73y"]
+[ext_resource type="Texture2D" uid="uid://tiy42la3f4m5" path="res://assets/focus/lake/land/above_land1.png" id="2_mc84x"]
+
+[sub_resource type="Animation" id="Animation_w62ed"]
+resource_name = "land1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Above:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mc84x")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Below:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_qx03k")]
+}
+
+[sub_resource type="Animation" id="Animation_bgvk2"]
+resource_name = "land2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Below:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_6e78d")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Above:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_dp73y")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37ygn"]
+_data = {
+"land1": SubResource("Animation_w62ed"),
+"land2": SubResource("Animation_bgvk2")
+}
+
+[node name="Land" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_hvx3s")
+
+[node name="Sprites" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="Below" type="Sprite2D" parent="Sprites"]
+modulate = Color(1, 1, 1, 0.054902)
+z_index = -1
+texture = ExtResource("1_qx03k")
+centered = false
+
+[node name="Above" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("2_mc84x")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites"]
+libraries = {
+"": SubResource("AnimationLibrary_37ygn")
+}

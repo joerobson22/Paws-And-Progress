@@ -1,0 +1,386 @@
+[gd_scene load_steps=18 format=3 uid="uid://b1in3g1v70q6q"]
+
+[ext_resource type="Texture2D" uid="uid://b4fdd6o3xv548" path="res://assets/completed-projects/backing.png" id="1_kujid"]
+[ext_resource type="Script" path="res://windows/completed-projects/completed_project.gd" id="1_kukc1"]
+[ext_resource type="PackedScene" uid="uid://dbqvnrl5nhacv" path="res://animal/animal.tscn" id="3_hjqj0"]
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="3_norrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24aor"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.295867, 0.295867, 0.295866, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_dsbqe"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_dm3jt"]
+resource_name = "bear1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_aeo5t"]
+resource_name = "bird1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_2kddo"]
+resource_name = "cat1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -30)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_nlxgn"]
+resource_name = "dog1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -15)]
+}
+
+[sub_resource type="Animation" id="Animation_k4416"]
+resource_name = "dog2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.55, 0.55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_6n3qu"]
+resource_name = "dog3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_sp121"]
+resource_name = "dog4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ch17v"]
+resource_name = "guinea_pig1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, -50)]
+}
+
+[sub_resource type="Animation" id="Animation_eqrwa"]
+resource_name = "rabbit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, -18)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_ouw5r"]
+resource_name = "snail"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animal:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animal:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g3d7e"]
+_data = {
+"RESET": SubResource("Animation_dsbqe"),
+"bear1": SubResource("Animation_dm3jt"),
+"bird1": SubResource("Animation_aeo5t"),
+"cat1": SubResource("Animation_2kddo"),
+"dog1": SubResource("Animation_nlxgn"),
+"dog2": SubResource("Animation_k4416"),
+"dog3": SubResource("Animation_6n3qu"),
+"dog4": SubResource("Animation_sp121"),
+"guinea_pig1": SubResource("Animation_ch17v"),
+"rabbit": SubResource("Animation_eqrwa"),
+"snail": SubResource("Animation_ouw5r")
+}
+
+[node name="Completed-Project" type="Node2D"]
+z_index = 1
+script = ExtResource("1_kukc1")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Backing" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("1_kujid")
+
+[node name="Panel" type="Panel" parent="Visuals"]
+offset_left = -101.0
+offset_top = -99.0
+offset_right = 101.0
+offset_bottom = 63.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_24aor")
+metadata/_edit_use_anchors_ = true
+
+[node name="Labels" type="Node2D" parent="Visuals"]
+
+[node name="Name_Label" type="Node2D" parent="Visuals/Labels"]
+position = Vector2(0, -135)
+
+[node name="Label" type="Label" parent="Visuals/Labels/Name_Label"]
+offset_left = -128.0
+offset_top = 9.0
+offset_right = 128.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_norrt")
+theme_override_font_sizes/font_size = 30
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Total_Time_Label" type="Node2D" parent="Visuals/Labels"]
+position = Vector2(0, 60)
+
+[node name="Label" type="Label" parent="Visuals/Labels/Total_Time_Label"]
+offset_left = -128.0
+offset_top = 7.0
+offset_right = 128.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_norrt")
+theme_override_font_sizes/font_size = 25
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Start_To_End_Label" type="Node2D" parent="Visuals/Labels"]
+position = Vector2(0, 90)
+
+[node name="Label" type="Label" parent="Visuals/Labels/Start_To_End_Label"]
+offset_left = -128.0
+offset_right = 129.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_norrt")
+theme_override_font_sizes/font_size = 15
+text = "01/01/2025 - 01/01/2025"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Animal" parent="Visuals" instance=ExtResource("3_hjqj0")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(9, -12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals"]
+libraries = {
+"": SubResource("AnimationLibrary_g3d7e")
+}

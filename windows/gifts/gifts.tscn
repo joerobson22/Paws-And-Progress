@@ -1,0 +1,325 @@
+[gd_scene load_steps=11 format=3 uid="uid://de12ckne437cb"]
+
+[ext_resource type="Script" path="res://windows/gifts/gifts.gd" id="1_0ji1m"]
+[ext_resource type="Texture2D" uid="uid://ckulhp0sdnvah" path="res://assets/gifts/background.png" id="1_x6qt4"]
+[ext_resource type="FontFile" uid="uid://cveouj21bacwl" path="res://assets/fonts/Daniel-Black.otf" id="4_adi8s"]
+[ext_resource type="Texture2D" uid="uid://bymxurjjgwxa1" path="res://assets/choose-focus/home.png" id="4_u51fx"]
+[ext_resource type="Texture2D" uid="uid://dg6gb56xocjtn" path="res://assets/gifts/shelf.png" id="4_wmq56"]
+[ext_resource type="PackedScene" uid="uid://7f310vajy2io" path="res://windows/focus/end-focus/given_gift.tscn" id="6_2hkra"]
+[ext_resource type="FontFile" uid="uid://r4sxbgrmy3g1" path="res://assets/fonts/daniel.ttf" id="7_h7ki7"]
+
+[sub_resource type="Animation" id="Animation_vxakr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cnvt6"]
+resource_name = "in"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.787759, 0.787759, 0.787759, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2kte"]
+_data = {
+"RESET": SubResource("Animation_vxakr"),
+"in": SubResource("Animation_cnvt6")
+}
+
+[node name="Gifts" type="Node2D"]
+script = ExtResource("1_0ji1m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Node2D" parent="CanvasLayer/HBoxContainer"]
+modulate = Color(0.434181, 0.287502, 0.183557, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/Background"]
+position = Vector2(17, 24)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_x6qt4")
+
+[node name="Buttons" type="Node2D" parent="CanvasLayer/HBoxContainer"]
+z_index = 2
+
+[node name="Home" type="Node2D" parent="CanvasLayer/HBoxContainer/Buttons"]
+position = Vector2(-450, -230)
+
+[node name="Control" type="Control" parent="CanvasLayer/HBoxContainer/Buttons/Home"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -27.0
+offset_top = -29.0
+offset_right = 31.0
+offset_bottom = 28.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/Buttons/Home"]
+texture = ExtResource("4_u51fx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/HBoxContainer/Buttons/Home"]
+libraries = {
+"": SubResource("AnimationLibrary_e2kte")
+}
+
+[node name="Title_Label" type="Node2D" parent="CanvasLayer/HBoxContainer"]
+z_index = 2
+position = Vector2(0, -290)
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Title_Label"]
+offset_left = -556.0
+offset_right = 595.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("4_adi8s")
+theme_override_font_sizes/font_size = 70
+text = "Gifts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Positions" type="Node2D" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(0, -50)
+scale = Vector2(0.95, 1)
+
+[node name="Pos1" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-436.842, -38)
+
+[node name="Pos2" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-383.158, -39)
+
+[node name="Pos3" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-306.316, -37)
+
+[node name="Pos4" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-244.211, -38)
+
+[node name="Pos5" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-175.789, -40)
+
+[node name="Pos6" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-101.053, -40)
+
+[node name="Pos7" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-37.8947, -42)
+
+[node name="Pos8" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(21.0526, -32)
+
+[node name="Pos9" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(92.6316, -36)
+
+[node name="Pos10" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(152.632, -29)
+
+[node name="Pos11" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(206.316, -36)
+
+[node name="Pos12" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(283.158, -35)
+
+[node name="Pos13" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(332.632, -39)
+
+[node name="Pos14" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(396.842, -30)
+
+[node name="Pos15" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(473.684, -34)
+
+[node name="Pos16" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-469.474, 97)
+
+[node name="Pos17" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-406.316, 97)
+
+[node name="Pos18" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-343.158, 97)
+
+[node name="Pos19" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-278.947, 97)
+
+[node name="Pos20" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-207.368, 97)
+
+[node name="Pos21" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-141.053, 96)
+
+[node name="Pos22" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-69.4734, 96)
+
+[node name="Pos23" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(9.47391, 104)
+
+[node name="Pos24" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(81.0529, 100)
+
+[node name="Pos25" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(141.053, 107)
+
+[node name="Pos26" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(194.737, 100)
+
+[node name="Pos27" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(271.579, 101)
+
+[node name="Pos28" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(321.053, 97)
+
+[node name="Pos29" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(385.263, 106)
+
+[node name="Pos30" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(462.105, 102)
+
+[node name="Pos31" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-448.421, 226)
+
+[node name="Pos32" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-385.263, 226)
+
+[node name="Pos33" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-322.105, 226)
+
+[node name="Pos34" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-257.894, 226)
+
+[node name="Pos35" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-186.315, 226)
+
+[node name="Pos36" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-120, 225)
+
+[node name="Pos37" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(-48.4208, 225)
+
+[node name="Pos38" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(30.5265, 233)
+
+[node name="Pos39" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(102.106, 229)
+
+[node name="Pos40" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(162.106, 236)
+
+[node name="Pos41" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(215.79, 229)
+
+[node name="Pos42" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(292.632, 230)
+
+[node name="Pos43" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(342.106, 226)
+
+[node name="Pos44" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(406.316, 235)
+
+[node name="Pos45" type="Node2D" parent="CanvasLayer/HBoxContainer/Positions"]
+position = Vector2(483.158, 231)
+
+[node name="Shelves" type="Node2D" parent="CanvasLayer/HBoxContainer"]
+modulate = Color(0.290805, 0.184363, 0.112125, 1)
+position = Vector2(0, -50)
+scale = Vector2(0.95, 1)
+
+[node name="Shelf1" type="Node2D" parent="CanvasLayer/HBoxContainer/Shelves"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/Shelves/Shelf1"]
+position = Vector2(20, -40)
+scale = Vector2(1.77, 1.75)
+texture = ExtResource("4_wmq56")
+
+[node name="Shelf2" type="Node2D" parent="CanvasLayer/HBoxContainer/Shelves"]
+position = Vector2(0, 125)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/Shelves/Shelf2"]
+position = Vector2(20, -30)
+scale = Vector2(1.8, 1.9)
+texture = ExtResource("4_wmq56")
+
+[node name="Shelf3" type="Node2D" parent="CanvasLayer/HBoxContainer/Shelves"]
+position = Vector2(0, 250)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/Shelves/Shelf3"]
+position = Vector2(20, -30)
+scale = Vector2(1.82, 2)
+texture = ExtResource("4_wmq56")
+
+[node name="Gift" parent="CanvasLayer/HBoxContainer" instance=ExtResource("6_2hkra")]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer/HBoxContainer/Gift"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -836.0
+offset_top = -490.0
+offset_right = 910.0
+offset_bottom = 588.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Gift"]
+offset_left = -558.0
+offset_top = 239.0
+offset_right = 597.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("7_h7ki7")
+theme_override_font_sizes/font_size = 30
+text = "Click to dismiss"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="CanvasLayer/HBoxContainer/Buttons/Home/Control" to="." method="_on_control_mouse_entered_HOME"]
+[connection signal="mouse_exited" from="CanvasLayer/HBoxContainer/Buttons/Home/Control" to="." method="_on_control_mouse_exited_HOME"]

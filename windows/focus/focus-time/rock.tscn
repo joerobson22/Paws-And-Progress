@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=3 uid="uid://daeoumeu7ptqm"]
+
+[ext_resource type="Texture2D" uid="uid://5rxrwacupv3s" path="res://assets/focus/lake/rocks/below_rock2.png" id="1_1x2mf"]
+[ext_resource type="Script" path="res://windows/focus/focus-time/rock.gd" id="1_6xs4d"]
+[ext_resource type="Texture2D" uid="uid://dr0rgtuyybmtk" path="res://assets/focus/lake/rocks/below_rock1.png" id="1_p4444"]
+[ext_resource type="Texture2D" uid="uid://b1v20hn3vsslr" path="res://assets/focus/lake/rocks/below_rock3.png" id="1_qii46"]
+[ext_resource type="Texture2D" uid="uid://dfwo4qws0etnl" path="res://assets/focus/lake/rocks/above_rock2.png" id="2_73qmh"]
+[ext_resource type="Texture2D" uid="uid://hf0ki71ch8mr" path="res://assets/focus/lake/rocks/above_rock3.png" id="2_f5by6"]
+[ext_resource type="Texture2D" uid="uid://drktoo6nu5u7q" path="res://assets/focus/lake/rocks/above_rock1.png" id="2_t40cc"]
+
+[sub_resource type="Animation" id="Animation_m7t6k"]
+resource_name = "rock1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Below:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_p4444")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Above:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_t40cc")]
+}
+
+[sub_resource type="Animation" id="Animation_hu4y2"]
+resource_name = "rock2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Below:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_1x2mf")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Above:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_73qmh")]
+}
+
+[sub_resource type="Animation" id="Animation_jcwfm"]
+resource_name = "rock3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Below:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_qii46")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Above:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f5by6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e743l"]
+_data = {
+"rock1": SubResource("Animation_m7t6k"),
+"rock2": SubResource("Animation_hu4y2"),
+"rock3": SubResource("Animation_jcwfm")
+}
+
+[node name="Rock" type="Node2D"]
+script = ExtResource("1_6xs4d")
+
+[node name="Sprites" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="Below" type="Sprite2D" parent="Sprites"]
+modulate = Color(1, 1, 1, 0.12549)
+z_index = -2
+texture = ExtResource("1_qii46")
+centered = false
+
+[node name="Above" type="Sprite2D" parent="Sprites"]
+texture = ExtResource("2_f5by6")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites"]
+libraries = {
+"": SubResource("AnimationLibrary_e743l")
+}

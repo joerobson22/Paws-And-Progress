@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhkscvibormap"]
+
+[ext_resource type="Texture2D" uid="uid://f6pvmne5ks4" path="res://assets/main/main-menu/projects_board/completed_project.png" id="1_jl22w"]
+
+[node name="Completed_Project_Image" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(23, 21)
+texture = ExtResource("1_jl22w")

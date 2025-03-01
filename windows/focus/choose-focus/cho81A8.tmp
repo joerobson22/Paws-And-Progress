@@ -1,0 +1,731 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqjcrsir4xsg1"]
+
+[ext_resource type="Script" path="res://windows/focus/choose-focus/choose_focus.gd" id="1_p3jk7"]
+[ext_resource type="Texture2D" uid="uid://cnjggmjk8fha3" path="res://assets/misc/aura.png" id="2_5yes8"]
+[ext_resource type="Texture2D" uid="uid://dccveebs06w1m" path="res://assets/misc/icon.svg" id="2_e1mr6"]
+
+[sub_resource type="Animation" id="Animation_23njn"]
+resource_name = "idle"
+length = 30.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Aura1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 11, 24),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.8, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Aura1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 12.5664]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Aura1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9, 19),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.184314, 0.466667, 0.690196, 0.643137), Color(0.280987, 0.397701, 0.856957, 0.643137), Color(0.15469, 0.503621, 0.511771, 0.643137)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Aura2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 17, 25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1.4, 1.4), Vector2(0.9, 0.9)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Aura2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0472, -5.23599]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Aura2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8, 19),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.26272, 0.56936, 0.818695, 0.341176), Color(6.73831e-07, 0.495578, 0.619682, 0.341176), Color(0.214157, 0.460462, 0.695086, 0.47451)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Aura3:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4, 13, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.9, 0.9), Vector2(1.2, 1.2), Vector2(1.3, 1.3), Vector2(1.2, 1.2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Aura3:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.14159, 15.708]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Aura3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10, 21),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.140764, 0.454652, 0.8618, 0.341176), Color(0.238429, 0.505626, 0.599989, 0.341176), Color(0.480802, 0.275378, 1, 0.0666667)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Aura4:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 15, 22),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.3, 1.3), Vector2(1.5, 1.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Aura4:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5708, 7.85398]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Aura4:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.129412, 0.52549, 0.627451, 0.435294), Color(0.169987, 0.551892, 0.404753, 0.435294), Color(0.33344, 0.441605, 0.831799, 0.435294)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Aura5:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 10, 22, 26),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.5, 1.5), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Aura5:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.785398, 7.06858]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Aura5:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 5, 20, 26),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0.478431, 0.85098, 0.372549), Color(0.117647, 0.435294, 0.521569, 0.568627), Color(0, 0.413348, 0.655723, 0.360784), Color(0.337255, 0.137255, 1, 0.215686)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Aura6:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 8, 22, 27),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1.4, 1.4), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Aura6:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.785398, -5.49779]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Aura6:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 14, 22, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.267589, 0.536451, 0.830158, 0.239216), Color(0.247059, 0.588235, 0.580392, 0.164706), Color(0.137255, 0.54902, 0.85098, 0.529412), Color(0.137255, 0.54902, 0.85098, 0.0470588)]
+}
+
+[sub_resource type="Animation" id="Animation_7rb2d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Aura1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Aura1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Aura1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.184314, 0.466667, 0.690196, 0.643137)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Aura2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Aura2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0472]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Aura2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.26272, 0.56936, 0.818695, 0.341176)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Aura3:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Aura3:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Aura3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.140764, 0.454652, 0.8618, 0.341176)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Aura4:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Aura4:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Aura4:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.129412, 0.52549, 0.627451, 0.435294)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Aura5:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Aura5:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785398]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Aura5:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.478431, 0.85098, 0.372549)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Aura6:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Aura6:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785398]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Aura6:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.267589, 0.536451, 0.830158, 0.239216)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bl6t7"]
+_data = {
+"RESET": SubResource("Animation_7rb2d"),
+"idle": SubResource("Animation_23njn")
+}
+
+[node name="Choose-Focus" type="Node2D"]
+script = ExtResource("1_p3jk7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -1606.0
+offset_top = -837.0
+offset_right = 2730.0
+offset_bottom = 1670.0
+color = Color(0, 0, 0, 0.372549)
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Title" type="Node2D" parent="Labels"]
+
+[node name="Label" type="Label" parent="Labels/Title"]
+offset_right = 1154.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 60
+text = "Choose Focus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Project_Name" type="Node2D" parent="Labels"]
+position = Vector2(0, 75)
+
+[node name="Label" type="Label" parent="Labels/Project_Name"]
+offset_right = 1154.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 35
+text = "Project Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animal_Name" type="Node2D" parent="Labels"]
+position = Vector2(0, 120)
+
+[node name="Label" type="Label" parent="Labels/Animal_Name"]
+offset_right = 1154.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 30
+text = "(Animal Name)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Total_Time_Label" type="Node2D" parent="Labels"]
+position = Vector2(576, 510)
+
+[node name="Label" type="Label" parent="Labels/Total_Time_Label"]
+offset_left = -576.0
+offset_right = 573.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 30
+text = "Total Focus Time: 00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Start_Focus" type="Node2D" parent="Buttons"]
+position = Vector2(576, 340)
+
+[node name="Aura" type="Node2D" parent="Buttons/Start_Focus"]
+modulate = Color(1, 1, 1, 0.572549)
+
+[node name="Aura1" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0.184314, 0.466667, 0.690196, 0.643137)
+texture = ExtResource("2_5yes8")
+
+[node name="Aura2" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0.26272, 0.56936, 0.818695, 0.341176)
+position = Vector2(-4, 14)
+rotation = 1.0472
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_5yes8")
+
+[node name="Aura3" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0.140764, 0.454652, 0.8618, 0.341176)
+position = Vector2(16, -26)
+rotation = 3.14159
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_5yes8")
+
+[node name="Aura4" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0.129412, 0.52549, 0.627451, 0.435294)
+position = Vector2(4, 20)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5yes8")
+
+[node name="Aura5" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0, 0.478431, 0.85098, 0.372549)
+position = Vector2(-10, 57)
+rotation = 0.785398
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5yes8")
+
+[node name="Aura6" type="Sprite2D" parent="Buttons/Start_Focus/Aura"]
+modulate = Color(0.267589, 0.536451, 0.830158, 0.239216)
+position = Vector2(13, 16)
+rotation = 0.785398
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_5yes8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Start_Focus/Aura"]
+libraries = {
+"": SubResource("AnimationLibrary_bl6t7")
+}
+
+[node name="Animal" type="Node2D" parent="Buttons/Start_Focus"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Start_Focus/Animal"]
+texture = ExtResource("2_e1mr6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Start_Focus"]
+
+[node name="Control" type="Control" parent="Buttons/Start_Focus"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -66.0
+offset_top = -64.0
+offset_right = 65.0
+offset_bottom = 63.0
+
+[node name="Left_Arrow" type="Node2D" parent="Buttons"]
+position = Vector2(75, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Left_Arrow"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Left_Arrow"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -63.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Left_Arrow"]
+
+[node name="Right_Arrow" type="Node2D" parent="Buttons"]
+position = Vector2(1077, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Right_Arrow"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Right_Arrow"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 64.0
+offset_bottom = 63.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Right_Arrow"]
+
+[node name="Animal_Left_Arrow" type="Node2D" parent="Buttons"]
+position = Vector2(300, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Animal_Left_Arrow"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Animal_Left_Arrow"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -63.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Animal_Left_Arrow"]
+
+[node name="Animal_Right_Arrow" type="Node2D" parent="Buttons"]
+position = Vector2(852, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Animal_Right_Arrow"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Animal_Right_Arrow"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -63.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Animal_Right_Arrow"]
+
+[node name="Home_Button" type="Node2D" parent="Buttons"]
+position = Vector2(75, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Home_Button"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Home_Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 64.0
+offset_bottom = 63.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Home_Button"]
+
+[node name="Delete_Button" type="Node2D" parent="Buttons"]
+position = Vector2(1077, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Delete_Button"]
+texture = ExtResource("2_e1mr6")
+
+[node name="Control" type="Control" parent="Buttons/Delete_Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 64.0
+offset_bottom = 63.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Delete_Button"]
+
+[node name="Complete_Button" type="Node2D" parent="Buttons"]
+position = Vector2(576, 600)
+
+[node name="Control" type="Control" parent="Buttons/Complete_Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -96.0
+offset_top = -21.0
+offset_right = 96.0
+offset_bottom = 48.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/Complete_Button"]
+
+[node name="Label" type="Label" parent="Buttons/Complete_Button"]
+offset_left = -576.0
+offset_top = -34.0
+offset_right = 573.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "Complete!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="Node2D" parent="."]
+position = Vector2(576, 550)
+
+[node name="Project_Name" type="LineEdit" parent="TextEdit"]
+offset_left = -190.0
+offset_top = -10.0
+offset_right = 195.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Project Name"
+
+[node name="Animal_Name" type="LineEdit" parent="TextEdit"]
+offset_left = -190.0
+offset_top = -10.0
+offset_right = 195.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Project Name"
+
+[connection signal="mouse_entered" from="Buttons/Start_Focus/Control" to="." method="_on_control_mouse_entered_FOCUS"]
+[connection signal="mouse_exited" from="Buttons/Start_Focus/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Left_Arrow/Control" to="." method="_on_control_mouse_entered_LEFT_ARROW"]
+[connection signal="mouse_exited" from="Buttons/Left_Arrow/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Right_Arrow/Control" to="." method="_on_control_mouse_entered_RIGHT_ARROW"]
+[connection signal="mouse_exited" from="Buttons/Right_Arrow/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Animal_Left_Arrow/Control" to="." method="_on_control_mouse_entered_LEFT_ANIMAL_ARROW"]
+[connection signal="mouse_exited" from="Buttons/Animal_Left_Arrow/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Animal_Right_Arrow/Control" to="." method="_on_control_mouse_entered_RIGHT_ANIMAL_ARROW"]
+[connection signal="mouse_exited" from="Buttons/Animal_Right_Arrow/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Home_Button/Control" to="." method="_on_control_mouse_entered_HOME"]
+[connection signal="mouse_exited" from="Buttons/Home_Button/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Delete_Button/Control" to="." method="_on_control_mouse_entered_DELETE"]
+[connection signal="mouse_exited" from="Buttons/Delete_Button/Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Complete_Button/Control" to="." method="_on_control_mouse_entered_COMPLETE"]
+[connection signal="mouse_exited" from="Buttons/Complete_Button/Control" to="." method="_on_control_mouse_exited"]

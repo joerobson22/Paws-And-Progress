@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1kwqg3q45i"]
+
+[ext_resource type="Script" path="res://windows/mute_button.gd" id="1_8otn6"]
+[ext_resource type="Texture2D" uid="uid://dqd3hejlpe4qr" path="res://assets/misc/aura2.png" id="2_buwa1"]
+[ext_resource type="Texture2D" uid="uid://dwlp065aq7khc" path="res://assets/misc/volume.png" id="3_q6y3i"]
+
+[sub_resource type="Animation" id="Animation_4s6ex"]
+resource_name = "in"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.91664, 0.91664, 0.91664, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mxtw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2jk7"]
+_data = {
+"RESET": SubResource("Animation_mxtw5"),
+"in": SubResource("Animation_4s6ex")
+}
+
+[node name="Mute_Button" type="Node2D"]
+script = ExtResource("1_8otn6")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -33.0
+offset_top = -31.0
+offset_right = 34.0
+offset_bottom = 32.0
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprites"]
+modulate = Color(0.93408, 0.934081, 0.93408, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_buwa1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprites"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_buwa1")
+
+[node name="Icon" type="Sprite2D" parent="Sprites"]
+modulate = Color(0.650128, 0.650128, 0.650128, 1)
+position = Vector2(-1, -2)
+texture = ExtResource("3_q6y3i")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u2jk7")
+}
+
+[connection signal="mouse_entered" from="CheckButton" to="." method="_on_check_button_mouse_entered"]
+[connection signal="mouse_exited" from="CheckButton" to="." method="_on_check_button_mouse_exited"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

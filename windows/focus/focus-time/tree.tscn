@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://djwys7201tv8y"]
+
+[ext_resource type="Texture2D" uid="uid://dcqvy3j2cs7fv" path="res://assets/focus/trees/close_tree3.png" id="1_c4g82"]
+[ext_resource type="Texture2D" uid="uid://bc13w2xrvod3l" path="res://assets/focus/trees/close_tree2.png" id="1_ck8ak"]
+[ext_resource type="Texture2D" uid="uid://g6itr0w0mn51" path="res://assets/focus/trees/close_tree1.png" id="1_srnpi"]
+[ext_resource type="Script" path="res://windows/focus/focus-time/tree.gd" id="2_kfe3p"]
+
+[sub_resource type="Animation" id="Animation_h6hpw"]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_srnpi")]
+}
+
+[sub_resource type="Animation" id="Animation_bd40m"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ck8ak")]
+}
+
+[sub_resource type="Animation" id="Animation_xg7pv"]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c4g82")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcxkf"]
+_data = {
+"1": SubResource("Animation_h6hpw"),
+"2": SubResource("Animation_bd40m"),
+"3": SubResource("Animation_xg7pv")
+}
+
+[node name="Tree" type="Sprite2D"]
+texture = ExtResource("1_c4g82")
+centered = false
+script = ExtResource("2_kfe3p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tcxkf")
+}
