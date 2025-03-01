@@ -379,24 +379,24 @@ z_index = 1
 points = PackedVector2Array(-300, 15, -300, 330, 300, 330)
 
 [node name="Hour_Marks" type="Node2D" parent="CanvasLayer/HBoxContainer/Graph"]
+visible = false
 position = Vector2(0, 15)
 
 [node name="Numbers" type="Label" parent="CanvasLayer/HBoxContainer/Graph/Hour_Marks"]
-offset_left = -347.0
-offset_top = 3.0
-offset_right = -304.0
-offset_bottom = 310.0
+offset_left = -334.0
+offset_top = -7.0
+offset_right = -291.0
+offset_bottom = 300.0
 theme_override_fonts/font = ExtResource("3_8lc0f")
 theme_override_font_sizes/font_size = 20
-text = "10 
-9  
-8
-7
-6
-5
+text = "5
+
 4
+
 3
+
 2
+
 1"
 autowrap_mode = 3
 
@@ -408,15 +408,15 @@ offset_bottom = 305.0
 theme_override_fonts/font = ExtResource("3_8lc0f")
 theme_override_font_sizes/font_size = 20
 text = "-
+
 -
+
 -
+
 -
+
 -
--
--
--
--
--"
+"
 autowrap_mode = 3
 
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Graph/Hour_Marks"]
@@ -429,6 +429,9 @@ theme_override_fonts/font = ExtResource("3_8lc0f")
 theme_override_font_sizes/font_size = 20
 text = "Hours"
 autowrap_mode = 3
+
+[node name="Marks" type="Node2D" parent="CanvasLayer/HBoxContainer/Graph"]
+position = Vector2(-305, 325)
 
 [node name="Days" type="Node2D" parent="CanvasLayer/HBoxContainer/Graph"]
 
@@ -459,7 +462,7 @@ modulate = Color(0, 0, 0, 0.741176)
 show_behind_parent = true
 offset_left = -284.0
 offset_top = 335.0
-offset_right = -243.0
+offset_right = -150.0
 offset_bottom = 385.0
 rotation = -1.5708
 max_value = 1.0

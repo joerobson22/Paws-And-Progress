@@ -11,6 +11,8 @@ extends Node2D
 @onready var Cabin_Armchair = $CanvasLayer/Centre/Cabin/Armchair
 @onready var Cabin_Light = $CanvasLayer/Centre/Cabin/Light
 
+@onready var Happy_Birthday = $CanvasLayer/Centre/Happy_Birthday/Label
+
 @onready var Choose_Focus = $CanvasLayer/Centre/Choose_Focus
 
 @onready var Character_Customisation = $CanvasLayer/Centre/Character_Customisation
@@ -78,6 +80,25 @@ func _ready() -> void:
 		Transition.AP.play("in")
 	else:
 		Transition.hide()
+	
+	print(global.timeDict)
+	var birthdayDates = [[3, 3], [8, 3], [9, 2], [7, 4], [30, 5], [22, 5], [24, 6], [12, 12], [25, 8], [1,9], [31, 1]]
+	var birthdayPeople = ["WILLIAM", "KATHRYN", "NICOLE", "JOE", "BEN", "MIKE", "LUKAS", "OSCAR", "REUBEN", "NIAMH", "MADI"]
+	var birthday : bool = false
+	
+	var i : int = 0
+	while i < birthdayDates.size():
+		birthday = isDate(birthdayDates[i][0], birthdayDates[i][1])
+		if birthday:
+			Happy_Birthday.text = "HAPPY BIRTHDAY " + birthdayPeople[i] + "!!!"
+			break
+		i += 1
+	
+	Happy_Birthday.visible = birthday
+
+
+func isDate(day : int, month : int) -> bool:
+	return (global.timeDict["day"] == day and global.timeDict["month"] == month)
 
 
 func Update_Weekly_Time() -> void:

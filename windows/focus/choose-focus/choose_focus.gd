@@ -48,7 +48,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if global.projects[currentFocus] == null and !switching and switchedVisuals:
+	if global.projects[currentFocus] == null and !switching and switchedVisuals and isColourCustomisable(global.animals[newProjectAnimal]):
 		newProjectAnimalColours[0] = Colour_Customisation.get_node("Colour1/Button/ColorPickerButton").color
 		newProjectAnimalColours[1] = Colour_Customisation.get_node("Colour2/Button/ColorPickerButton").color
 		newProjectAnimalColours[2] = Colour_Customisation.get_node("Colour3/Button/ColorPickerButton").color
@@ -201,10 +201,16 @@ func Display_Animal() -> void:
 		Button_StartFocus.get_node("Animal/Animal/Plus/AnimationPlayer").play("idle")
 		Button_StartFocus.get_node("Animal/Animal/AnimationPlayer").play(global.animals[newProjectAnimal])
 		
+		var colourCustomisable : bool = isColourCustomisable(global.animals[newProjectAnimal])
+		
 		var i : int = 0
 		for n in Colour_Customisation.get_children():
+			n.visible = colourCustomisable
 			n.get_node("Label/Label").text = global.animalParts[global.animals[newProjectAnimal]][i]
 			i += 1
+		
+		if !colourCustomisable:
+			newProjectAnimalColours = [Color(1.0, 1.0, 1.0, 1.0), Color(1.0, 1.0, 1.0, 1.0), Color(1.0, 1.0, 1.0, 1.0)]
 	else:
 		Button_StartFocus.get_node("Animal/Animal/Plus").hide()
 		#changes sprite textures
@@ -216,7 +222,11 @@ func Display_Animal() -> void:
 		Button_StartFocus.get_node("Animal/Animal/Body/Part3").modulate = proj.colours[2]
 
 
-
+func isColourCustomisable(name : String) -> bool:
+	for n in global.colourNotCustomisable:
+		if n == name:
+			return false
+	return true
 
 #function for switching windows
 func Focus() -> void:

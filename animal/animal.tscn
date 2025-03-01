@@ -1,8 +1,9 @@
-[gd_scene load_steps=73 format=3 uid="uid://dbqvnrl5nhacv"]
+[gd_scene load_steps=79 format=3 uid="uid://dbqvnrl5nhacv"]
 
 [ext_resource type="Texture2D" uid="uid://yymmjfe2bp2r" path="res://assets/animals/rabbit/backleg.png" id="1_4p64s"]
 [ext_resource type="Texture2D" uid="uid://bkvh22jautqfg" path="res://assets/animals/cat1/leg.png" id="1_5k3px"]
 [ext_resource type="Texture2D" uid="uid://gbemsqsce4wj" path="res://assets/animals/dog4/backleg.png" id="1_05u8d"]
+[ext_resource type="Texture2D" uid="uid://bl3x60oorn7pl" path="res://assets/animals/bmd/backleg.png" id="1_c0nq2"]
 [ext_resource type="Texture2D" uid="uid://c2j8thniyqirn" path="res://assets/animals/snail/body.png" id="1_deo67"]
 [ext_resource type="Texture2D" uid="uid://bwuu7kmsdrdim" path="res://assets/animals/bird1/wing.png" id="1_g1s41"]
 [ext_resource type="Texture2D" uid="uid://d4l2byfmm0ioa" path="res://assets/animals/bear1/leg.png" id="1_ii6h5"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bp74c3bhno3fo" path="res://assets/animals/guinea_pig1/legs.png" id="1_qav1a"]
 [ext_resource type="Texture2D" uid="uid://drlmfvxk3h6yy" path="res://assets/animals/dog3/leg.png" id="1_w53x6"]
 [ext_resource type="Texture2D" uid="uid://cbmu6getdk8dp" path="res://assets/animals/dog2/body.png" id="2_1r6kg"]
+[ext_resource type="Texture2D" uid="uid://j4155s2n85sw" path="res://assets/animals/bmd/frontleg.png" id="2_3mn0i"]
 [ext_resource type="Texture2D" uid="uid://cugwwglbxdpnn" path="res://assets/animals/rabbit/frontleg.png" id="2_4k6ff"]
 [ext_resource type="Texture2D" uid="uid://b3egkq0biffdl" path="res://assets/animals/dog1/body.png" id="2_dpd6h"]
 [ext_resource type="Texture2D" uid="uid://df0k8srkb80h4" path="res://assets/animals/cat1/leg2.png" id="2_fn3w8"]
@@ -25,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ndd02xuw45b" path="res://assets/animals/dog1/pattern.png" id="3_4r7nw"]
 [ext_resource type="Texture2D" uid="uid://bik3f24otyach" path="res://assets/animals/dog2/pattern.png" id="3_7rf0s"]
 [ext_resource type="Texture2D" uid="uid://c5knjd0h0mckm" path="res://assets/animals/dog3/pattern.png" id="3_apwt2"]
+[ext_resource type="Texture2D" uid="uid://r6c7ekpq65nj" path="res://assets/animals/bmd/body.png" id="3_ihn3o"]
 [ext_resource type="Texture2D" uid="uid://ci682k1vu0fpa" path="res://assets/animals/bear1/pattern.png" id="3_lixko"]
 [ext_resource type="Texture2D" uid="uid://qh7njwpoo1fn" path="res://assets/animals/cat1/body.png" id="3_lnawu"]
 [ext_resource type="Texture2D" uid="uid://ckd2gwg56aeec" path="res://assets/animals/rabbit/body.png" id="3_mmmwm"]
@@ -137,94 +140,46 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Body:scale")
+tracks/4/path = NodePath("Legs/BackLeg1:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.5, 0.5)]
+"values": [Vector2(1, 1)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Legs:scale")
+tracks/5/path = NodePath("Legs/BackLeg2:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.5, 0.5)]
+"values": [Vector2(1, 1)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Body:position")
+tracks/6/path = NodePath("Legs/ForeLeg1:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(1, 1)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Legs:position")
+tracks/7/path = NodePath("Legs/ForeLeg2:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Legs/BackLeg1:scale")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Legs/BackLeg2:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Legs/ForeLeg1:scale")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Legs/ForeLeg2:scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -2925,6 +2880,189 @@ tracks/15/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_r34fe"]
+resource_name = "dog5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Legs/BackLeg1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c0nq2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Legs/ForeLeg1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_c0nq2")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Legs/BackLeg2:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_3mn0i")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Legs/ForeLeg2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_3mn0i")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Part2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ihn3o")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Part3:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Face:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 15)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Legs:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Legs:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 15)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Legs/BackLeg2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(165.333, 20)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Legs/ForeLeg2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106.667, 38.6667)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Legs/ForeLeg1:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-173.333, 14.6667)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Legs/BackLeg1:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-90.6667, 9.33333)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6s54t"]
 _data = {
 "RESET": SubResource("Animation_7u6uw"),
@@ -2935,6 +3073,7 @@ _data = {
 "dog2": SubResource("Animation_uh5ck"),
 "dog3": SubResource("Animation_cnqb7"),
 "dog4": SubResource("Animation_jld4w"),
+"dog5": SubResource("Animation_r34fe"),
 "guinea_pig1": SubResource("Animation_wka03"),
 "rabbit": SubResource("Animation_w4x7f"),
 "snail": SubResource("Animation_505kg")
@@ -2942,6 +3081,66 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_ikm60"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Legs/BackLeg1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Legs/ForeLeg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Legs/ForeLeg1:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Legs/BackLeg2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Part2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
 
 [sub_resource type="Animation" id="Animation_n8cp6"]
 resource_name = "bear1_walk"
@@ -3940,6 +4139,126 @@ tracks/2/keys = {
 "values": [Vector2(0, 0), Vector2(5, 0), Vector2(5, 0), Vector2(-2.5, 0), Vector2(-2.5, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_84847"]
+resource_name = "dog5"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Legs/BackLeg1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.261799, -0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Legs/ForeLeg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.261799, -0.261799]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Legs/ForeLeg1:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-0.261799, 0.261799]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Legs/BackLeg2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-0.261799, 0.261799]
+}
+
+[sub_resource type="Animation" id="Animation_wdf8c"]
+resource_name = "dog5_walk"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Legs/BackLeg2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-0.261799, 0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Legs/ForeLeg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.261799, -0.261799]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Legs/BackLeg1:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.261799, -0.261799]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Legs/ForeLeg1:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-0.261799, 0.261799]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Part2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 3)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1xy3"]
 _data = {
 "RESET": SubResource("Animation_ikm60"),
@@ -3951,6 +4270,8 @@ _data = {
 "dog3_walk": SubResource("Animation_sgpsx"),
 "dog4": SubResource("Animation_ix4vt"),
 "dog4_walk": SubResource("Animation_n31es"),
+"dog5": SubResource("Animation_84847"),
+"dog5_walk": SubResource("Animation_wdf8c"),
 "guinea_pig1_walk": SubResource("Animation_fkbka"),
 "rabbit_walk": SubResource("Animation_54t45"),
 "snail_walk": SubResource("Animation_lp1j1")
@@ -3960,39 +4281,40 @@ _data = {
 scale = Vector2(0.75, 0.75)
 
 [node name="Legs" type="Node2D" parent="."]
+position = Vector2(0, 15)
 scale = Vector2(0.5, 0.5)
 
 [node name="BackLeg1" type="Sprite2D" parent="Legs"]
 modulate = Color(0.817521, 0.817521, 0.817521, 1)
-position = Vector2(-28, 123.667)
-texture = ExtResource("1_kex0n")
+position = Vector2(-90.6667, 9.33333)
+texture = ExtResource("1_c0nq2")
 
 [node name="BackLeg2" type="Sprite2D" parent="Legs"]
 modulate = Color(0.737193, 0.737193, 0.737193, 1)
-position = Vector2(56, 119.667)
-texture = ExtResource("1_kex0n")
+position = Vector2(165.333, 20)
+texture = ExtResource("2_3mn0i")
 
 [node name="ForeLeg1" type="Sprite2D" parent="Legs"]
 z_index = 1
-position = Vector2(-44, 127.667)
-texture = ExtResource("1_kex0n")
+position = Vector2(-173.333, 14.6667)
+texture = ExtResource("1_c0nq2")
 
 [node name="ForeLeg2" type="Sprite2D" parent="Legs"]
 z_index = 1
-position = Vector2(38.6667, 125)
-texture = ExtResource("1_kex0n")
+position = Vector2(106.667, 38.6667)
+texture = ExtResource("2_3mn0i")
 
 [node name="Body" type="Node2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, 15)
+scale = Vector2(0.6, 0.6)
 
 [node name="Part2" type="Sprite2D" parent="Body"]
-texture = ExtResource("2_1r6kg")
+position = Vector2(0, 3)
+texture = ExtResource("3_ihn3o")
 
 [node name="Part3" type="Sprite2D" parent="Body"]
-texture = ExtResource("3_7rf0s")
 
 [node name="Face" type="Sprite2D" parent="Body"]
-texture = ExtResource("4_bixc4")
 
 [node name="Plus" type="Sprite2D" parent="."]
 visible = false

@@ -7,20 +7,26 @@ extends Node2D
 @onready var Label_FocusTimePB = $CanvasLayer/HBoxContainer/Labels/Focus_Time_PB_Label/Label
 
 @onready var Bars = $CanvasLayer/HBoxContainer/Graph/Bars
+@onready var Marks = $CanvasLayer/HBoxContainer/Graph/Marks
 
 @onready var Button_LeftArrow = $CanvasLayer/HBoxContainer/Buttons/Left_Arrow
 @onready var Button_RightArrow = $CanvasLayer/HBoxContainer/Buttons/Right_Arrow
 
+var markNode = preload("res://windows/stats/mark.tscn")
 
 var Main_Menu_Scene : String = "res://windows/main/main_menu.tscn"
 
 var graphWeek : int = global.totalWeeks
+
+var maxVal : int = 0
 
 func _ready():
 	if global.founder:
 		$CanvasLayer/HBoxContainer/Badge.show()
 	else:
 		$CanvasLayer/HBoxContainer/Badge.hide()
+	Get_Max_Value()
+	Set_Marks()
 	Display_Stats()
 	Display_Bars()
 	Update_Arrows()
@@ -53,10 +59,44 @@ func Display_Bars() -> void:
 	for bar in Bars.get_children():
 		if graphWeek == global.totalWeeks:
 			var hours : float = Seconds_To_Hours(global.thisWeekDailyTotals[i])
-			bar.size.x = (hours * 31) + 10
+			bar.size.x = (hours * (310 / maxVal)) + 10
 		else:
 			var hours : float = Seconds_To_Hours(global.pastWeekDailyTotals[type_convert(graphWeek, TYPE_STRING)][i])
-			bar.size.x = (hours * 31) + 10
+			bar.size.x = (hours * (310 / maxVal)) + 10
+		i += 1
+
+
+func Get_Max_Value() -> void:
+	maxVal = 0
+	for n in global.thisWeekDailyTotals:
+		if n > maxVal:
+			maxVal = n
+	
+	var i : int = 0
+	#print(global.totalWeeks)
+	while i < global.totalWeeks:
+		var this = global.pastWeekDailyTotals[type_convert(i, TYPE_STRING)]
+		#print(this)
+		for n in this:
+			#print(n)
+			if n > maxVal:
+				maxVal = n
+		#print(i)
+		i += 1
+	
+	maxVal = Seconds_To_Hours(maxVal)
+	maxVal += 1
+	type_convert(maxVal, TYPE_INT)
+	maxVal = min(maxVal, 24)
+
+
+func Set_Marks() -> void:
+	var i : int = 1
+	while i < maxVal + 1:
+		var newMark = markNode.instantiate()
+		newMark.get_node("Number").text = type_convert(i, TYPE_STRING)
+		newMark.position.y -= (i * (310 / maxVal))
+		Marks.add_child(newMark)
 		i += 1
 
 
@@ -119,7 +159,7 @@ func _on_button_mouse_exited_RIGHTARROW():
 	
 
 func Display_Hours(num : int) -> void:
-	$CanvasLayer/HBoxContainer/Graph/Label_HoursDisplay.text = "Hours: " + type_convert(snappedf((Bars.get_node("Bar" + type_convert(num, TYPE_STRING)).size.x - 10) / 31, 0.01), TYPE_STRING)
+	$CanvasLayer/HBoxContainer/Graph/Label_HoursDisplay.text = "Hours: " + type_convert(snappedf((Bars.get_node("Bar" + type_convert(num, TYPE_STRING)).size.x - 10) / (310 / maxVal), 0.01), TYPE_STRING)
 	$CanvasLayer/HBoxContainer/Graph/Label_HoursDisplay.show()
 
 

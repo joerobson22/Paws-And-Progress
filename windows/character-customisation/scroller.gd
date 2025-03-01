@@ -10,7 +10,7 @@ var quantities = {
 	"hat" : [1, 1, 1, 1, global.gifts[14], global.gifts[26], 0, 0],
 	"hair" : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
 	"face" : [1, 1, 1, 1, 1, 1],
-	"jumper" : [1, 1, 1, 1, 1, global.gifts[2], global.gifts[23], 0],
+	"jumper" : [1, 1, 1, 1, 1, global.gifts[2], global.gifts[23], global.gifts[32]],
 	"neckwear" : [1, global.gifts[8], global.gifts[29], 0, 0, 0, 0, 0],
 	"handwear" : [1, global.gifts[11], global.gifts[20], 0],
 	"walking_stick" : [1, global.gifts[5], global.gifts[17], 0],

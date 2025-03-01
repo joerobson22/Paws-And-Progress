@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://h5x8a5klj2m7"]
+
+[ext_resource type="FontFile" uid="uid://xubed831mtc" path="res://assets/fonts/danielbd.ttf" id="2_rkdub"]
+
+[node name="Mark" type="Node2D"]
+
+[node name="Number" type="Label" parent="."]
+offset_left = -33.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("2_rkdub")
+text = "10"
+
+[node name="Line" type="Label" parent="."]
+offset_left = -8.0
+offset_right = 5.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_rkdub")
+text = "-"
+horizontal_alignment = 1

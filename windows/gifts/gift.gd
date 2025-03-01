@@ -48,7 +48,7 @@ func _input(event: InputEvent) -> void:
 			quantity -= tradeRequirements[rarityNum]
 			global.gifts[giftNum] = quantity
 			
-			global.newGiftRarity = rarityNum + 1
+			global.newGiftRarity = 2
 			global.giveNewGift = true
 
 

@@ -363,7 +363,7 @@ script = ExtResource("1_jvqkr")
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_ps88k")
 hframes = 64
-frame = 7
+frame = 32
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
